@@ -4,13 +4,8 @@
 /* set font for body */
 body{
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
     background-color:#F4F4F4;
-=======
-    background-color: #77c481
->>>>>>> 144d29c4cfcbb1bb173a07f7a65a70641880baea
 }
-
 /* reset settings */
 *{
     margin: 0;

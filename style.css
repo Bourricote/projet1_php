@@ -11,3 +11,96 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* formulaire réservation */
+
+#booking{
+    background-color: #f4fa9c;
+}
+
+hr{
+    border: #626662 1px solid;
+    width: 80%;
+    margin: 2rem;
+}
+
+h2{
+    margin: 1rem;
+}
+
+#booking, #livraison{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input, textarea, select, label{
+   margin: 0.7rem;
+}
+
+input, select{
+   height: 20px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.form1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#booking_button{
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #188dbb;
+    align-self: flex-end;
+}
+
+#booking_button:hover{
+    background-color: #e0a039;
+    cursor: pointer;
+}
+
+/* Livraison */
+
+#livraison{
+    margin-bottom: 2rem;
+}
+
+#link_livraison{
+    display: flex;
+    flex-direction: column;
+}
+
+#test{
+    position: relative;
+    top: 10rem;
+    padding: 0.5rem;
+    color: white;
+    width: 80%;
+    border-radius: 10px;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#link_livraison img{
+    height: 250px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+@media (max-width: 961px){
+
+}

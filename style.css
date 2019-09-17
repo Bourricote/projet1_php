@@ -11,3 +11,78 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/*Section article card -- Paul*/
+
+.banniere{
+    background: url(Images/banniere-bc.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+#all-card {
+    display:flex;
+    justify-content: space-around;
+}
+.card{
+    position: relative;
+    height: 230px;
+    width: 350px;
+    margin-bottom: 30px;
+    text-align: center;
+    color : #FFF;
+}
+article img{
+    height: 100%;
+}
+.card-title{
+    margin: 0;
+    transform: translateY(-140px);
+    opacity: 1;
+    transition: all 1s;
+}
+.plat{
+    margin:30px;
+}
+.card-visibility{
+    transform: translateY(-255px);
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    transition: all 1s;
+}
+.card:hover .card-visibility{
+    visibility: visible;
+    opacity: 1;
+}
+.card:hover .card-title{
+    visibility: hidden;
+    opacity:0;
+}
+
+/* END -- Section article card -- Paul*/
+
+@media (max-width:961px){
+/* Section article card -- Paul */
+#all-card{
+    flex-direction: column;
+    margin: 0 auto;
+}
+#all-card article{
+    margin:0 auto;
+}
+
+.card{
+    height: 210px;
+}
+.card-title{
+    transform: translateY(-130px)
+}
+.card-visibility{
+    transform: translateY(-245px)
+}
+
+/* END -- Section article card -- Paul*/
+
+
+}

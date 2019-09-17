@@ -14,6 +14,20 @@
     </nav>
 
     <section>
+        <form method="post" action="traitement.php">
+            <p>
+                <label for="adress">Indiquez votre adresse</label>
+                <input type="text" name="numero" id="numero" placeholder="1 - 2Bis - 3Ter" />
+                <input type="text" name="rue" id="rue" placeholder="rue Jean-Michel Papin" />
+            </p>
+
+            <p>
+                <input type="checkbox" name="frites" id="frites" /> <label for="frites">Frites</label><br />
+                <input type="checkbox" name="steak" id="steak" /> <label for="steak">Steak haché</label><br />
+                <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">Epinards</label><br />
+                <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">Huitres</label>
+            </p>
+        </form>
         
     </section>
 

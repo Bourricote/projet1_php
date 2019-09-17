@@ -4,6 +4,7 @@
 /* set font for body */
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #77c481
 }
 
 /* reset settings */
@@ -11,6 +12,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 
 /*Section article card -- Paul*/
 
@@ -159,6 +161,42 @@ textarea{
     opacity: 0.8;
 }
 
+
+/* Section d'Adrien - Page 2 */
+
+.p2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: justify;    
+}
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#numero, #rue, #code, #ville{
+    width: 25%;
+}
+
+.nb {
+    width: 10%;
+}
+.nbmidi {
+    width: 15%;
+}
+#entree, #plat, #dessert, #boisson {
+    width: 25%;
+}
+.adress, .choix, .menu, .livraison {
+    margin-top: 50px;
+}
+.button {
+    margin: 50px;
+}
+
+/* Fin de la section d'Adrien - Page 2 */
+
 @media (max-width: 961px){
     
     /* Section article card -- Paul */
@@ -216,4 +254,32 @@ textarea{
     #link{
         text-align: center;
     }
+}
+@media screen and (min-width:961px) {
+    .adress {
+        display: block;
+        align-items: center;
+    }
+    #numero  {
+        width: 4%;
+    }
+    #rue {
+        width: 14%;
+    }
+    #code {
+        width: 6%;
+    } 
+    #ville {
+        width: 12%;
+    }
+    .nb {
+        width: 4%;
+    }
+    .nbmidi {
+        width: 7%;
+    }
+    #entree, #plat, #dessert, #boisson {
+        width: 20%;
+    }
+    
 }

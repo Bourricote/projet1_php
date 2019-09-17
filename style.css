@@ -15,7 +15,7 @@ body{
 /* formulaire réservation */
 
 #booking{
-    background-color: #f4fa9c;
+    background-color: #fad390;
 }
 
 hr{
@@ -45,8 +45,12 @@ input, textarea, select, label{
    margin: 0.7rem;
 }
 
-input, select{
+input{
    height: 20px;
+}
+
+select{
+    height: 25px;
 }
 
 textarea{
@@ -63,7 +67,9 @@ textarea{
     width: 15%;
     height: 50px;
     border-radius: 10px;
-    background-color: #188dbb;
+    background-color: #706852;
+    color: white;
+    font-weight: bold;
     align-self: flex-end;
 }
 
@@ -76,6 +82,7 @@ textarea{
 
 #livraison{
     margin-bottom: 2rem;
+    background-color: #F4F4F4;
 }
 
 #link_livraison{
@@ -83,9 +90,9 @@ textarea{
     flex-direction: column;
 }
 
-#test{
+#link{
     position: relative;
-    top: 10rem;
+    top: 12rem;
     padding: 0.5rem;
     color: white;
     width: 80%;
@@ -93,6 +100,7 @@ textarea{
     align-self: center;
     text-decoration: none;
     font-weight: bold;
+    z-index: 1;
 }
 
 #link_livraison img{
@@ -102,5 +110,38 @@ textarea{
 }
 
 @media (max-width: 961px){
+    /* Formulaire */
 
+    form{
+        width: 75%;
+    }
+
+    span{
+        display: none;
+    }
+
+    .form1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #booking_button{
+        width: 100px;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+    /* Livraison */
+
+    #link_livraison img{
+        height: 200px;
+        justify-self: center;
+    }
+
+    #link{
+        text-align: center;
+    }
 }

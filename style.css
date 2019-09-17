@@ -11,3 +11,209 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/*Section article card -- Paul*/
+
+.banniere{
+    background: url(Images/banniere-bc.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+#all-card {
+    display:flex;
+    justify-content: space-around;
+}
+.card{
+    position: relative;
+    height: 230px;
+    width: 350px;
+    margin-bottom: 30px;
+    text-align: center;
+    color : #FFF;
+}
+article img{
+    height: 100%;
+}
+.card-title{
+    margin: 0;
+    transform: translateY(-140px);
+    opacity: 1;
+    transition: all 1s;
+}
+.plat{
+    margin:30px;
+}
+.card-visibility{
+    transform: translateY(-255px);
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    transition: all 1s;
+}
+.card:hover .card-visibility{
+    visibility: visible;
+    opacity: 1;
+}
+.card:hover .card-title{
+    visibility: hidden;
+    opacity:0;
+}
+
+/* END -- Section article card -- Paul*/
+
+/* formulaire réservation */
+
+#booking{
+    background-color: #fad390;
+}
+
+hr{
+    border: #626662 1px solid;
+    width: 80%;
+    margin: 2rem;
+}
+
+h2{
+    margin: 1rem;
+}
+
+#booking, #livraison{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input, textarea, select, label{
+   margin: 0.7rem;
+}
+
+input{
+   height: 20px;
+}
+
+select{
+    height: 25px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.form1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#booking_button{
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #706852;
+    color: white;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+#booking_button:hover{
+    background-color: #e0a039;
+    cursor: pointer;
+}
+
+/* Livraison */
+
+#livraison{
+    margin-bottom: 2rem;
+    background-color: #F4F4F4;
+}
+
+#link_livraison{
+    display: flex;
+    flex-direction: column;
+}
+
+#link{
+    position: relative;
+    top: 12rem;
+    padding: 0.5rem;
+    color: white;
+    width: 80%;
+    border-radius: 10px;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#link_livraison img{
+    height: 250px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+@media (max-width: 961px){
+    
+    /* Section article card -- Paul */
+    #all-card{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #all-card article{
+        margin:0 auto;
+    }
+
+    .card{
+        height: 210px;
+    }
+    .card-title{
+        transform: translateY(-130px)
+    }
+    .card-visibility{
+        transform: translateY(-245px)
+    }
+    
+    /* END -- Section article card -- Paul*/
+    
+    /* Formulaire */
+
+    form{
+        width: 75%;
+    }
+
+    span{
+        display: none;
+    }
+
+    .form1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #booking_button{
+        width: 100px;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+    /* Livraison */
+
+    #link_livraison img{
+        height: 200px;
+        justify-self: center;
+    }
+
+    #link{
+        text-align: center;
+    }
+}

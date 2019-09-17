@@ -4,7 +4,11 @@
 /* set font for body */
 body{
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     background-color:#F4F4F4;
+=======
+    background-color: #77c481
+>>>>>>> 144d29c4cfcbb1bb173a07f7a65a70641880baea
 }
 
 /* reset settings */
@@ -12,6 +16,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 
 /*Section article card -- Paul*/
 
@@ -67,27 +72,222 @@ article img{
 }
 /* END -- Section article card -- Paul*/
 
-@media (max-width:961px){
-/* Section article card -- Paul */
-#all-card{
+/* formulaire réservation */
+
+#booking{
+    background-color: #fad390;
+}
+
+hr{
+    border: #626662 1px solid;
+    width: 80%;
+    margin: 2rem;
+}
+
+h2{
+    margin: 1rem;
+}
+
+#booking, #livraison{
+    display: flex;
     flex-direction: column;
-    margin: 0 auto;
-}
-#all-card article{
-    margin:0 auto;
+    width: 100%;
+    align-items: center;
 }
 
-.card{
-    height: 210px;
-}
-.card-title{
-    transform: translateY(-130px)
-}
-.card-visibility{
-    transform: translateY(-245px)
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
 
-/* END -- Section article card -- Paul*/
+input, textarea, select, label{
+   margin: 0.7rem;
+}
+
+input{
+   height: 20px;
+}
+
+select{
+    height: 25px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.form1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#booking_button{
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #706852;
+    color: white;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+#booking_button:hover{
+    background-color: #e0a039;
+    cursor: pointer;
+}
+
+/* Livraison */
+
+#livraison{
+    margin-bottom: 2rem;
+    background-color: #F4F4F4;
+}
+
+#link_livraison{
+    display: flex;
+    flex-direction: column;
+}
+
+#link{
+    position: relative;
+    top: 12rem;
+    padding: 0.5rem;
+    color: white;
+    width: 80%;
+    border-radius: 10px;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#link_livraison img{
+    height: 250px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
 
 
+/* Section d'Adrien - Page 2 */
+
+.p2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: justify;    
+}
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#numero, #rue, #code, #ville{
+    width: 25%;
+}
+
+.nb {
+    width: 10%;
+}
+.nbmidi {
+    width: 15%;
+}
+#entree, #plat, #dessert, #boisson {
+    width: 25%;
+}
+.adress, .choix, .menu, .livraison {
+    margin-top: 50px;
+}
+.button {
+    margin: 50px;
+}
+
+/* Fin de la section d'Adrien - Page 2 */
+
+@media (max-width: 961px){
+    
+    /* Section article card -- Paul */
+    #all-card{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #all-card article{
+        margin:0 auto;
+    }
+
+    .card{
+        height: 210px;
+    }
+    .card-title{
+        transform: translateY(-130px)
+    }
+    .card-visibility{
+        transform: translateY(-245px)
+    }
+    
+    /* END -- Section article card -- Paul*/
+    
+    /* Formulaire */
+
+    form{
+        width: 75%;
+    }
+
+    span{
+        display: none;
+    }
+
+    .form1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #booking_button{
+        width: 100px;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+    /* Livraison */
+
+    #link_livraison img{
+        height: 200px;
+        justify-self: center;
+    }
+
+    #link{
+        text-align: center;
+    }
+}
+@media screen and (min-width:961px) {
+    .adress {
+        display: block;
+        align-items: center;
+    }
+    #numero  {
+        width: 4%;
+    }
+    #rue {
+        width: 14%;
+    }
+    #code {
+        width: 6%;
+    } 
+    #ville {
+        width: 12%;
+    }
+    .nb {
+        width: 4%;
+    }
+    .nbmidi {
+        width: 7%;
+    }
+    #entree, #plat, #dessert, #boisson {
+        width: 20%;
+    }
+    
 }

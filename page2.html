@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,87 @@
 
     </nav>
 
+    
+    
+    <!------------------------------------------------------------------------------------------------>
+    
+    
+    
     <section>
+        <form method="post" action="traitement.php" class="p2">
+            <p class="adress">
+                <label for="adress">Indiquez votre adresse :</label><br>
+                <input type="text" name="numero" id="numero" placeholder="1-2Bis" required/>
+                <input type="text" name="rue" id="rue" placeholder="rue Jean-Michel Papin" required/><br>
+                <input type="text" name="code" id="code" placeholder="33000" required/>
+                <input type="text" name="ville" id="ville" placeholder="Bordeaux" required/><br>
+            </p>
+            <p>
+                <textarea name="comments" id="comments" cols="35" rows="3" placeholder="Précisions supplémentaires : numéro d'interphone, etc"></textarea>
+            </p>
+
+            <p class="menu">
+                <input type="radio" name="choix" id="midi" /> <label for="midi">Menu Midi   </label><br> 
+                <input type="number" class="nbmidi" min="0" max="10" step=1 value="0"  /><br>               
+            </p>
+            
+            <p class="choix">  
+                    <input type="radio" name="choix" id="carte" /> <label for="carte">A la Carte</label><br />
+                <label for="entree">Choississez vos plats :</label><br>
+                <select name="entree" id="entree">                    
+                    <option value="" disabled selected>Entrées</option>
+                    <option value="salade">Salade César </option>
+                    <option value="croquette">Croquettes de Brie </option>
+                </select>
+                <input type="number" class="nb" min="0" max="10" step=1 value="0"  /><br>
+
+                <select name="plat" id="plat">                    
+                    <option value="" disabled selected>Plats</option>
+                    <option value="hamburger">Hamburger</option>
+                    <option value="f&c">Fish & Chips</option>
+                </select>
+                <input type="number" class="nb" min="0" max="10" step=1 value="0"  /><br>
+
+                <select name="dessert" id="dessert">
+                    <option value="" disabled selected>Desserts</option>
+                    <option value="tiramisu">Tiramisu</option>
+                    <option value="chocolat">Meolleux au chocolat</option>
+                </select>
+                <input type="number" class="nb" min="0" max="10" step=1 value="0"  /><br>
+
+                <select name="boisson" id="boisson">                    
+                    <option value="" disabled selected>Boissons</option>
+                    <option value="bière">Bière 1664 25cl</option>
+                    <option value="citron">Citronnade maison</option>
+                    <option value="pepper">Dr Pepper 33cl</option>
+                    <option value="eau">Eau minérale 33cl</option>
+                </select>
+                <input type="number" class="nb" min="0" max="10" step=1 value="0"  /><br>
+            </p>
+            <p class="livraison">
+                <label for="livraion">Heure de livraison souhaitée :</label><br>
+                <select name="livraison" id="livr">
+                    <option value="tot" selected>Au plus tôt</option>
+                    <option value="1930">Entre 19h30 et 20h</option>
+                    <option value="2000">Entre 20h et 20h30</option>
+                    <option value="2030">Entre 20h30 et 21h</option>
+                </select><br>
+            </p>
+            <p class="button">
+                <input type="submit" value="Envoyer" />
+            </p>
+        </form>
         
     </section>
+
+
+
+
+<!--------------------------------------------------------------------------->
+
+
+
+
 
     <footer>
 

@@ -4,6 +4,7 @@
 /* set font for body */
 body{
     font-family: 'Poppins', sans-serif;
+    background-color:#F4F4F4;
 }
 
 /* reset settings */
@@ -60,6 +61,10 @@ article img{
     opacity:0;
 }
 
+
+#livraison{
+    background-color: #fad390;
+}
 /* END -- Section article card -- Paul*/
 
 @media (max-width:961px){

@@ -167,8 +167,10 @@ textarea{
 
 /* Section d'Adrien - Page 2 */
 
-.page-2 {
+
+section {
     background-color: #fad390;
+    
 }
 .p2 {
     display: flex;
@@ -183,17 +185,17 @@ textarea{
     align-items: center;
 }
 #numero-page2, #rue-page2, #code-page2, #ville-page2 {
-    width: 25%;
+    width: 50%;
 }
 
 .nb-page2 {
-    width: 10%;
+    width: 20%;
 }
 .nbmidi-page2 {
     width: 15%;
 }
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
-    width: 25%;
+    width: 30%;
 }
 .adress-page2, .menu-page2, .livraison-page2 {
     margin-top: 40px;
@@ -276,16 +278,16 @@ textarea{
         align-items: center;
     }
     #numero-page2  {
-        width: 4%;
+        width: 10%;
     }
     #rue-page2 {
-        width: 14%;
+        width: 24%;
     }
     #code-page2 {
-        width: 6%;
+        width: 14%;
     } 
     #ville-page2 {
-        width: 12%;
+        width: 20%;
     }
     .nb-page2 {
         width: 4%;
@@ -296,5 +298,14 @@ textarea{
     #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
         width: 20%;
     }
-    
+    .page-2 {
+        background: url(Images/img-page2.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+    section { 
+        width: 70%;
+        margin: auto;
+    }
 }

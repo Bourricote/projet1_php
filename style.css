@@ -274,7 +274,7 @@ footer{
     align-items: center;
 }
 #numero-page2, #rue-page2, #code-page2, #ville-page2 {
-    width: 50%;
+    width: 40%;
 }
 
 .nb-page2 {
@@ -284,7 +284,7 @@ footer{
     width: 15%;
 }
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
-    width: 30%;
+    width: 50%;
 }
 .adress-page2, .menu-page2, .livraison-page2 {
     margin-top: 40px;
@@ -433,7 +433,7 @@ footer{
         width: 10%;
     }
     #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
-        width: 25%;
+        width: 30%;
     }
     .page-2 {
         background: url(Images/img-page2.jpg) no-repeat;
@@ -450,7 +450,8 @@ footer{
         border-radius: 10px;
     }
     .section-p2 { 
-        width: 60%;
+        background-color: transparent;
+        width: 80%;
         margin: auto;
     }
 }

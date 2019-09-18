@@ -27,8 +27,7 @@ body{
 }
 .card{
     position: relative;
-    height: 230px;
-    width: 350px;
+    height: 350px;
     margin-bottom: 30px;
     text-align: center;
     color : #FFF;
@@ -38,19 +37,21 @@ article img{
 }
 .card-title{
     margin: 0;
-    transform: translateY(-140px);
+    transform: translateY(-215px);
     opacity: 1;
     transition: all 1s;
+    font-size: 3rem;
 }
 .plat{
     margin:30px;
 }
 .card-visibility{
-    transform: translateY(-255px);
+    transform: translateY(-400px);
     visibility: hidden;
     opacity: 0;
     font-weight: bold;
     transition: all 1s;
+    font-size: 1.5rem;
 }
 .card:hover .card-visibility{
     visibility: visible;
@@ -60,7 +61,6 @@ article img{
     visibility: hidden;
     opacity:0;
 }
-
 
 #livraison{
     background-color: #fad390;
@@ -200,6 +200,21 @@ textarea{
 
 /* Fin de la section d'Adrien - Page 2 */
 
+@media (max-width: 1050px){
+    /*Section Paul / Articles - Card*/
+    .card{
+        height: 300px;
+    }
+    .card-title{
+        transform: translateY(-190px);
+        font-size:2.5rem;
+    }
+    .card-visibility{
+        transform: translateY(-370px);
+        font-size: 1.4rem;
+    }
+}
+
 @media (max-width: 961px){
     
     /* Section article card -- Paul */
@@ -215,10 +230,12 @@ textarea{
         height: 210px;
     }
     .card-title{
-        transform: translateY(-130px)
+        transform: translateY(-130px);
+        font-size: 1rem;
     }
     .card-visibility{
-        transform: translateY(-245px)
+        transform: translateY(-245px);
+        font-size: 1rem;
     }
     
     /* END -- Section article card -- Paul*/
@@ -286,3 +303,5 @@ textarea{
     }
     
 }
+
+

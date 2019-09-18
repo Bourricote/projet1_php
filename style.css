@@ -16,10 +16,10 @@ body{
 /*Section article card -- Paul*/
 
 .banniere{
-    background: url(Images/banniere-bc.jpg) no-repeat;
+    background: url(Images/banniere-logo.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
 }
 #all-card {
     display:flex;
@@ -88,12 +88,14 @@ h2{
     flex-direction: column;
     width: 100%;
     align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
 }
 
 input, textarea, select, label{
@@ -122,14 +124,16 @@ textarea{
     width: 15%;
     height: 50px;
     border-radius: 10px;
-    background-color: #706852;
+    background-color: #6e6e6e;
     color: white;
     font-weight: bold;
     align-self: flex-end;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 #booking_button:hover{
-    background-color: #e0a039;
+    background-color: #58B19F;
     cursor: pointer;
 }
 
@@ -149,13 +153,23 @@ textarea{
     position: relative;
     top: 12rem;
     padding: 0.5rem;
-    color: white;
-    width: 80%;
+    background-color: #fad390;
+    color: black;
+    width: 60%;
     border-radius: 10px;
     align-self: center;
     text-decoration: none;
     font-weight: bold;
     z-index: 1;
+    text-align: center;
+}
+
+#link:visited{
+    color: black;
+}
+
+#link:hover{
+    background-color: #58B19F;
 }
 
 #link_livraison img{
@@ -164,6 +178,60 @@ textarea{
     opacity: 0.8;
 }
 
+/* Footer */
+footer{
+    display: flex;
+    background-color: #58B19F;
+    justify-content: space-around;
+    height: 350px;
+}
+
+.div_img_footer{
+    display: flex;
+}
+
+#logo_footer{
+    width: 250px;
+    margin: auto;
+}
+
+#map_footer{
+    width: 300px;
+    margin: auto;
+}
+
+.footer_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_div h3, .footer_div p, .footer_div a{
+    padding: 0.5rem;
+}
+
+.footer_div a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer_div a:visited{
+    color: black;
+}
+
+.footer_div a:hover{
+    color: white;
+}
+
+#social{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social_logo{
+    width: 100px;
+    padding: 1rem;
+}
 
 /* Section d'Adrien - Page 2 */
 
@@ -218,6 +286,10 @@ textarea{
 @media (max-width: 961px){
     
     /* Section article card -- Paul */
+    .banniere{
+        display: none;
+    }
+
     #all-card{
         flex-direction: column;
         margin: 0 auto;
@@ -264,6 +336,7 @@ textarea{
     h2{
         font-size: 1.2rem;
     }
+
     /* Livraison */
 
     #link_livraison img{
@@ -274,7 +347,20 @@ textarea{
     #link{
         text-align: center;
     }
+
+    /* Footer */
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer_div, .div_img_footer{
+        margin-bottom: 2rem;
+    }
+
 }
+
+
 @media screen and (min-width:961px) {
     .adress {
         display: block;

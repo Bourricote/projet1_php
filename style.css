@@ -167,36 +167,48 @@ textarea{
 
 /* Section d'Adrien - Page 2 */
 
+.page-2 {
+    background-color: #fad390;
+}
 .p2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: justify;    
+    justify-content: justify;
+    margin: auto;    
 }
-.adress {
+.adress-page2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#numero, #rue, #code, #ville{
+#numero-page2, #rue-page2, #code-page2, #ville-page2 {
     width: 25%;
 }
 
-.nb {
+.nb-page2 {
     width: 10%;
 }
-.nbmidi {
+.nbmidi-page2 {
     width: 15%;
 }
-#entree, #plat, #dessert, #boisson {
+#entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
     width: 25%;
 }
-.adress, .choix, .menu, .livraison {
-    margin-top: 50px;
+.adress-page2, .menu-page2, .livraison-page2 {
+    margin-top: 40px;
 }
-.button {
+.button-page2 {
     margin: 50px;
+}   
+.p2 input, select {
+    margin: 0;
 }
+#entree-page2, #plat-page2, #dessert-page2, #boisson-page2, #livr {
+    height: 30px;
+}
+
+
 
 /* Fin de la section d'Adrien - Page 2 */
 
@@ -259,29 +271,29 @@ textarea{
     }
 }
 @media screen and (min-width:961px) {
-    .adress {
+    .adress-page2 {
         display: block;
         align-items: center;
     }
-    #numero  {
+    #numero-page2  {
         width: 4%;
     }
-    #rue {
+    #rue-page2 {
         width: 14%;
     }
-    #code {
+    #code-page2 {
         width: 6%;
     } 
-    #ville {
+    #ville-page2 {
         width: 12%;
     }
-    .nb {
+    .nb-page2 {
         width: 4%;
     }
-    .nbmidi {
+    .nbmidi-page2 {
         width: 7%;
     }
-    #entree, #plat, #dessert, #boisson {
+    #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
         width: 20%;
     }
     

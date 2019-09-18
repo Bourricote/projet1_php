@@ -240,36 +240,59 @@ footer{
 
 /* Section d'Adrien - Page 2 */
 
+
+section {
+    background-color: #fad390;
+    
+}
 .p2 {
+    background : url(Images/order.jpg);
+    background-repeat: no-repeat;
+    background-size: 250%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: justify;    
+    justify-content: justify;
+    margin: auto;    
+    color: white;
+    box-shadow: black 5px 2px 10px;
+    border-radius: 10px;
 }
-.adress {
+.adress-page2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#numero, #rue, #code, #ville{
-    width: 25%;
+#numero-page2, #rue-page2, #code-page2, #ville-page2 {
+    width: 50%;
 }
 
-.nb {
-    width: 10%;
+.nb-page2 {
+    width: 20%;
 }
-.nbmidi {
+.nbmidi-page2 {
     width: 15%;
 }
-#entree, #plat, #dessert, #boisson {
-    width: 25%;
+#entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
+    width: 30%;
 }
-.adress, .choix, .menu, .livraison {
-    margin-top: 50px;
+.adress-page2, .menu-page2, .livraison-page2 {
+    margin-top: 40px;
 }
-.button {
+.choix-page2 {
+    margin-top: 25px;
+}
+.button-page2 {
     margin: 50px;
+}   
+.p2 input, select {
+    margin: 0;
 }
+#entree-page2, #plat-page2, #dessert-page2, #boisson-page2, #livraison-page2 {
+    height: 30px;
+}
+
+
 
 /* Fin de la section d'Adrien - Page 2 */
 
@@ -372,31 +395,40 @@ footer{
 
 
 @media screen and (min-width:961px) {
-    .adress {
+    .adress-page2 {
         display: block;
         align-items: center;
     }
-    #numero  {
-        width: 4%;
+    #numero-page2  {
+        width: 10%;
     }
-    #rue {
+    #rue-page2 {
+        width: 24%;
+    }
+    #code-page2 {
         width: 14%;
-    }
-    #code {
-        width: 6%;
     } 
-    #ville {
-        width: 12%;
-    }
-    .nb {
-        width: 4%;
-    }
-    .nbmidi {
-        width: 7%;
-    }
-    #entree, #plat, #dessert, #boisson {
+    #ville-page2 {
         width: 20%;
     }
-    
+    .nb-page2 {
+        width: 8%;
+    }
+    .nbmidi-page2 {
+        width: 10%;
+    }
+    #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
+        width: 25%;
+    }
+    .page-2 {
+        background: url(Images/img-page2.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+    }
+    section { 
+        width: 60%;
+        margin: auto;
+    }
 }
 

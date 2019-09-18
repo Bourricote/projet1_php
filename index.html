@@ -18,7 +18,7 @@
 
         </nav>
 
-        <div class="banniere"></div>
+        <div class="banniere">
 
         </div>
     </header>
@@ -71,26 +71,26 @@
         <h2>Réservez votre table en ligne</h2>
         <form action="url" method="POST">
             <div class="form1">
-                <div>
+                <div class="form_item">
                     <label for="name">Nom</label>
                     <input type="text" id="name" placeholder="Entrez votre nom" required>
                 </div>
-                <div>
+                <div class="form_item">
                     <label for="first_name">Prénom</label>
                     <input type="text" id="first_name" placeholder="Entrez votre prénom" required>
                 </div>
             </div>
             <div class="form1">
-                <div>
+                <div class="form_item">
                     <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" placeholder="Entrez votre numéro de Téléphone" required pattern="[0_9]{10}">
                 </div>
-                <div>
+                <div class="form_item">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Entrez votre email" required>
                 </div>
             </div>
-            <div>
+            <div class="form_item">
                 <label for="nb_people">Nombre de personnes <span>(au-delà de 10 personnes appeler directement le restaurant)</span> </label>
                 <select name="nb_people" id="nb_people">
                     <option value="1">1</option>
@@ -109,7 +109,7 @@
                 <div>
                     <label for="date">Date</label>
                     <!-- pour dire date min aujourd'hui besoin javascript ?-->
-                    <input type="date" id="date" placeholder="Date" required>
+                    <input type="date" id="date" required>
                 </div>
                 <div>
                     <label for="hour">Heure</label>

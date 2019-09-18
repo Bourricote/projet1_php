@@ -334,6 +334,11 @@ footer{
         width: 100%;
     }
 
+    .form_item{
+        display: flex;
+        flex-direction: column;
+    }
+
     #booking_button{
         width: 100px;
     }

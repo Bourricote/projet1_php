@@ -16,14 +16,28 @@ body{
 /*Section article card -- Paul*/
 
 .banniere{
-    background: url(Images/banniere-logo.jpg) no-repeat;
+    background: url(Images/banniere-bc.jpg) no-repeat center fixed;
     background-attachment: fixed;
     background-size: cover;
     height: 95vh;
 }
+.container-logo{
+    background: url(Images/logo.png) no-repeat center fixed;
+    background-attachment: fixed;
+    height: 95vh;
+}
+
 #all-card {
     display:flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.main-card{
+    display:flex;
+    flex-direction: row;
     justify-content: space-around;
+
 }
 .card{
     position: relative;
@@ -231,6 +245,7 @@ footer{
 #social{
     display: flex;
     justify-content: space-around;
+    align-self: center;
 }
 
 .social_logo{
@@ -312,10 +327,15 @@ footer{
     .banniere{
         display: none;
     }
+    .container-logo{
+        display: none;
+    }
 
     #all-card{
-        flex-direction: column;
         margin: 0 auto;
+    }
+    .main-card{
+        flex-direction: column;
     }
     #all-card article{
         margin:0 auto;

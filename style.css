@@ -81,6 +81,7 @@ hr{
 
 h2{
     margin: 1rem;
+    text-align: center;
 }
 
 #booking, #livraison{
@@ -213,6 +214,10 @@ footer{
 .footer_div a{
     text-decoration: none;
     font-weight: bold;
+}
+
+.footer_div a:link{
+    color: black;
 }
 
 .footer_div a:visited{

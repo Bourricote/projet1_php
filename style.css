@@ -12,6 +12,48 @@ body{
     padding: 0;
 }
 
+/*Dominique: Top Bar Début*/
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding-right: 50px;
+  padding-right: 50px;
+  background-color: rgb(216, 169, 169)
+}
+
+.topbar .logo {
+  float: left;
+  left: 0px;
+  margin-right: 200px;
+  margin-left: 0px;
+}
+
+.navbar a {
+  padding: 0 20px;
+}
+
+
+.topbar nav {
+  float: left; 
+  right:20px;
+}
+
+.topbar .navbar {
+  float : left;
+}
+
+.navbar{
+  display: flex;
+} 
+
+/* Dominique : Fin NavBar*/
+
+
 
 /*Section article card -- Paul*/
 
@@ -455,4 +497,8 @@ footer{
         margin: auto;
     }
 }
+
+
+
+
 

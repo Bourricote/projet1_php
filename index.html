@@ -6,6 +6,8 @@
     <meta name="description" content="Présentation d'un pub mythique de Bordeaux !">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>The Central Pub</title>
 </head>
 
@@ -15,23 +17,20 @@
 <!-- Header : nav et bannière : Dominique ------------------------------->
     <header>
            
-        <!-- Elément 1 : Logo de Paul-->      
+           
                            
-        <nav class= "topbar">          
-            <div class="navbar"> 
-                <img class="logo" src="https://files.slack.com/files-pri/T6SG2QGG2-FN3L0N8CS/logo.png" height="80px" width="80px" title="Resto" alt="Logo de Paul" >
-                <h2 class="texte"> The Central Pub</h2>                   
-                <a href="#navMenu">Menu</a>
-                <a href="#navCarte">Carte</a>
-                <a href="#navRésa">Réservation</a>
-                <a href="#navLivraison">Livraison</a>
-                <a href="#navContact">Contact</a> 
-                    
-                <a href="#navBurger">Hamburger</a>
-                
-                  
-            </div> 
-            <!-- code pour le hamburger -->   
+        <nav class="navbar" id="myTopnav">
+        
+            <img class="logo" src="Images/logo.png" title="Resto" alt="Logo de Paul">
+            <p>The Central Pub</p>
+            <a href="#all-card">Menu</a>
+            <a href="#all-card">Carte</a>
+            <a href="./index.html#booking">Réservation</a>
+            <a href="page2.html">Livraison</a>
+            <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
+                <i class="fa fa-bars"></i>
+            </a>
+           
         </nav>
 
 
@@ -173,7 +172,7 @@
             <p>7 Quai des Queyries</p>
             <p>33800 Bordeaux</p>
             <p>05 57 80 38 00</p>
-            <a href="./index.html/#booking">Formulaire de réservation</a>
+            <a href="./index.html#booking">Formulaire de réservation</a>
             <a href="./page2.html" target="_blank">Formulaire de livraison</a>
         </div>
         <div class="div_img_footer">
@@ -187,6 +186,6 @@
 
     </footer>
     
-  
+<script src="script.js"></script>
 </body>
 </html>

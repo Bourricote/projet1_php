@@ -13,11 +13,9 @@ body{
 }
 
 /*Dominique: Top Bar Début*/
-.topbar {
+.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right:0;
+  z-index: 4;
   width: 100%;
   height: 80px;
   line-height: 80px;

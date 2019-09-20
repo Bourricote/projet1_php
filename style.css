@@ -94,6 +94,9 @@ article img{
     font-size: 3rem;
 }
 
+.prix-menu-midi{
+    font-size:2rem;
+}
 .card-visibility{
     display: flex;
     flex-direction: column;
@@ -428,6 +431,9 @@ footer{
         transform: translateY(-370px);
         font-size: 1.4rem;
     }
+    .prix-menu-midi{
+        font-size:1.5rem;
+    }
     .opacity{
         transform: translateY(-667px);
     }
@@ -463,6 +469,9 @@ footer{
     .card-visibility{
         transform: translateY(-240px);
         font-size: 1rem;
+    }
+    .prix-menu-midi{
+        font-size:1.5rem;
     }
     .opacity{
         transform: translateY(-451px);

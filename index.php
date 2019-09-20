@@ -51,6 +51,7 @@
                     <h1 class="card-title">Menu midi</h1>
                     <div class="card-visibility">
                         <div class="start">
+                            <p class="prix-menu-midi">15 €</p>
                             <p>Entrée : </p>
                             <p>Salade César</p>
                         </div>

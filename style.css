@@ -17,17 +17,30 @@ body{
   position: fixed;
   z-index: 4;
   width: 100%; 
-  background-color: rgb(216, 169, 169);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.logo {
-  width: 100px;
+.navbar a { 
+  color :#58B19F; 
+  font-size: 1.2rem; 
 }
 
-.navbar a {
-  padding: 0 20px;
+#texte{
+  color: black;
 }
+
+.navbar a:link{
+  text-decoration:none;
+}
+
+.navbar a:hover{
+  text-decoration:none;
+  color: black;
+}
+
 
 /* Dominique : Fin NavBar*/
 
@@ -297,13 +310,12 @@ footer{
     background-color: #fad390;
     
 }
-.p2 {
-    
+.p2 {  
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: justify;
-    margin: auto;    
+    margin: 100px auto;    
 }
 .adress-page2 {
     display: flex;

@@ -27,6 +27,7 @@
             <a href="./index.php#all-card">Carte</a>
             <a href="./index.php#booking">Réservation</a>
             <a href="./page2.html">Livraison</a>
+            <a href="./index.php#contact">Contact</a>
             <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -167,7 +168,7 @@
 
 
 <!-- Footer: Anne   -------------------------------------------------->
-    <footer>
+    <footer id="contact">
         <div class="div_img_footer">
             <img src="Images/logo.png" alt="logo Central Pub" id="logo_footer"/>
         </div>

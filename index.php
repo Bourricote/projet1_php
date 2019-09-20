@@ -73,15 +73,15 @@
                     <h1 class="card-title">Carte</h1>
                     <div class="card-visibility">
                         <div class="start">
-                            <p>Entrées : </p>
+                            <p>Entrées (5€): </p>
                             <p>Salade César / Croquette de brie</p>
                         </div>
                         <div class="plat">
-                            <p>Plats :</p>
+                            <p>Plats (9€):</p>
                             <p>Hamburger / Fish & Chips</p>
                         </div>
                         <div class="end">
-                            <p>Desserts : </p>
+                            <p>Desserts (5€): </p>
                             <p>Moelleux au chocolat / Tiramisu</p>
                         </div>
                     </div>

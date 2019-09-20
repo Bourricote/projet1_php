@@ -15,6 +15,7 @@ body{
 /*Dominique: Top Bar Début*/
 .navbar {
   position: fixed;
+  top:0px;
   z-index: 4;
   width: 100%; 
   background-color: rgba(255, 255, 255, 0.9);
@@ -31,6 +32,9 @@ body{
 #texte{
   color: black;
 }
+#texte:hover{
+    color:#fad390;
+}
 
 .navbar a:link{
   text-decoration:none;
@@ -38,7 +42,7 @@ body{
 
 .navbar a:hover{
   text-decoration:none;
-  color: black;
+  color: #fad390;
 }
 
 
@@ -289,7 +293,7 @@ footer{
 }
 
 .footer_div a:hover{
-    color: white;
+    color:#fad390;
 }
 
 #social{
@@ -315,7 +319,7 @@ footer{
     flex-direction: column;
     text-align: center;
     justify-content: justify;
-    margin: 100px auto;    
+    margin: 75px auto 0 auto; 
 }
 .adress-page2 {
     display: flex;
@@ -350,6 +354,9 @@ footer{
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2, #livraison-page2 {
     height: 30px;
 }
+.js{
+    cursor: pointer;
+}
 
 
 
@@ -366,11 +373,12 @@ footer{
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
   .navbar a.icon {
-    float: right;
     display: block;
+    margin-right: 15px;
   }
   .navbar{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -443,6 +451,7 @@ footer{
     .opacity{
         transform: translateY(-451px);
     }
+
     
     /* END -- Section article card -- Paul*/
     

@@ -1,5 +1,5 @@
 function confirm() {
-    const message = 'Commande validée, retour à la page 1';
+    const message = 'Commande validée, vous allez être redirigié vers l\'accueil';
     alert(message);
 }
 

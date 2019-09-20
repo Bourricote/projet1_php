@@ -362,6 +362,22 @@ footer{
 
 /* Fin de la section d'Adrien - Page 2 */
 
+/* form php */
+
+#php{
+    height: 200px;
+    width: 70%;
+    background-color: #F4F4F4;
+    color: black;
+    margin: 300px auto;
+    display: flex;
+}
+
+#php_title{
+    margin: auto;
+}
+/* fin form php */
+
 /* debut menu burger */
 
 /* Hide the link that should open and close the navbar on small screens */
@@ -393,7 +409,7 @@ footer{
   .navbar.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
   }
 } 
 /* end test burger*/ 

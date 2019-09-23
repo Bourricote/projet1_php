@@ -44,7 +44,7 @@
         
         
         <section id="php">
-            <h1 id="php_title"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation a bien été prise en compte !'; ?></h1>
+            <h1 id="php_title"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' a ' . $_POST['hour'] . ' a bien été prise en compte !'; ?></h1>
             
         </section>
 

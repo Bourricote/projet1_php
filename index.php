@@ -13,22 +13,12 @@
 
 <body>
 <!-- Header : nav et bannière : Dominique ------------------------------->
-    <header>
-        <nav class="navbar" id="myTopnav">
-            <a href="./index.php" id="texte"><h2>The Central Pub</h2></a>
-            <a href="./index.php#all-card">Menu</a>
-            <a href="./index.php#all-card">Carte</a>
-            <a href="./index.php#booking">Réservation</a>
-            <a href="./page2.html">Livraison</a>
-            <a href="./index.php#contact">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
 
-        <div class="banniere"></div>
-        <div class="container-logo"></div>
-    </header>
+    <?php include_once ("nav.php");?>
+
+    <div class="banniere"></div>
+    <div class="container-logo"></div>
+
 
 <!-- Articles : Paul ------------------------------------------------->
 
@@ -215,39 +205,13 @@
     <section id="livraison">
         <h2>Faites-vous livrer à domicile !</h2>
         <div id="link_livraison">
-            <a href="./page2.html" target="_blank" id="link">Faites-vous livrer !</a>
-            <a href="./page2.html" target="_blank"> <img src="Images/livraison2.jpg" alt="scooter"></a>
+            <a href="page2.php" target="_blank" id="link">Faites-vous livrer !</a>
+            <a href="page2.php" target="_blank"> <img src="Images/livraison2.jpg" alt="scooter"></a>
         </div>
     </section>
 
 <!-- Footer: Anne   -------------------------------------------------->
-    <footer id="contact">
-        <div class="div_img_footer">
-            <img src="Images/logo.png" alt="logo Central Pub" id="logo_footer"/>
-        </div>
-        <div class="footer_div" id="horaires">
-            <h3>Horaires d'ouverture</h3>
-            <p>Nous sommes ouverts 7j/7</p>
-            <p>de 9h00 à 2h00</p>
-            <p>Service en continu</p>
-        </div>
-        <div class="footer_div" id="contact">
-            <p>7 Quai des Queyries</p>
-            <p>33800 Bordeaux</p>
-            <p>05 57 80 38 00</p>
-            <a href="./index.php#booking">Formulaire de réservation</a>
-            <a href="./page2.html" target="_blank">Formulaire de livraison</a>
-        </div>
-        <div class="div_img_footer">
-            <img src="Images/map.png" alt="access map" id="map_footer"/>
-        </div>
-        <div id="social">
-            <a href="https://www.facebook.com/thecentralpubbastide/"><img src="Images/facebook.svg" alt="logo facebook" class="social_logo" /></a>
-            <a href="https://www.instagram.com/thecentralpubbastide/?hl=fr"><img src="Images/insta.svg" alt="logo instagram" class="social_logo"/></a>
-            <a href="#"><img src="Images/twitter.svg" alt="logo twitter" class="social_logo"/></a>
-        </div>
-
-    </footer>
+    <?php include_once("footer.php");?>
     
 <script src="script.js"></script>
 </body>

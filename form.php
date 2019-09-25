@@ -27,7 +27,7 @@
                 <a href="./index.php#all-card">Menu</a>
                 <a href="./index.php#all-card">Carte</a>
                 <a href="./index.php#booking">Réservation</a>
-                <a href="./page2.html">Livraison</a>
+                <a href="page2.php">Livraison</a>
                 <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -67,7 +67,7 @@
 
             
                 <a href="./index.php#booking">Formulaire de réservation</a>
-                <a href="./page2.html" target="_blank">Formulaire de livraison</a>
+                <a href="page2.php" target="_blank">Formulaire de livraison</a>
             </div>
             <div class="div_img_footer">
                 <img src="Images/map.png" alt="access map" id="map_footer"/>

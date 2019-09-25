@@ -129,11 +129,8 @@ article img{
 }
 .card:hover .opacity{
     width: 95%;
-
 }
 
-#livraison{
-    background-color: #fad390;
 }
 /* END -- Section article card -- Paul*/
 
@@ -257,7 +254,6 @@ textarea{
 /* Livraison */
 
 #livraison{
-    margin-bottom: 2rem;
     background-color: #F4F4F4;
 }
 

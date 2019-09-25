@@ -12,16 +12,9 @@
 </head>
 
 <body>
-
-
 <!-- Header : nav et bannière : Dominique ------------------------------->
     <header>
-           
-           
-                           
         <nav class="navbar" id="myTopnav">
-        
-            
             <a href="./index.php" id="texte"><h2>The Central Pub</h2></a>
             <a href="./index.php#all-card">Menu</a>
             <a href="./index.php#all-card">Carte</a>
@@ -31,15 +24,11 @@
             <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
                 <i class="fa fa-bars"></i>
             </a>
-           
         </nav>
-
 
         <div class="banniere"></div>
         <div class="container-logo"></div>
-        
     </header>
-
 
 <!-- Articles : Paul ------------------------------------------------->
 
@@ -94,6 +83,71 @@
         </div>
 
     </section>
+
+<!-- Plats et prix PHP -->
+<section id="prices">
+    <?php
+        $meals = [
+                'Entrées'    => [
+                        'Salade César' => [
+                                'picture' => 'Images/salade.jpg',
+                                'price' => '5€',
+                                ],
+                        'Croquettes de Brie' => [
+                                'picture' => 'Images/croquettes.jpg',
+                                'price' => '6€',
+                                ],
+                        'Assiette de charcuterie' => [
+                                'picture' => 'Images/charcuterie.jpg',
+                                'price' => '8€',
+                                ],
+                        ],
+                'Plats'     => [
+                        'Hamburger' => [
+                                'picture' => 'Images/burger.jpg',
+                                'price' => '10€',
+                                ],
+                        'Fish and Chips' => [
+                                'picture' => 'Images/fish.jpg',
+                                'price' => '12€',
+                                ],
+                        'Lasagnes' => [
+                                'picture' => 'Images/lasagnes.jpg',
+                                'price' => '11€',
+                                ],
+                        ],
+                'Desserts' => [
+                    'Moelleux au chocolat' => [
+                                'picture' => 'Images/moelleux.jpg',
+                                'price' => '6€',
+                                ],
+                    'Tiramisu' => [
+                                'picture' => 'Images/tiramisu.jpg',
+                                'price' => '7€',
+                                ],
+                    'Poire belle Hélène' => [
+                                'picture' => 'Images/poire.jpg',
+                                'price' => '8€',
+                                ],
+                        ],
+
+                ];
+
+        foreach ($meals as $typeCourse => $courses){
+            echo '<h3>' . $typeCourse . '</h3>';
+            echo '<div class="type_course">';
+            foreach ($courses as $key => $values){
+                echo '<div class="course">';
+                echo '<h4 class="course_name">' . $key . '</h4>';
+                echo '<img src="'. $values['picture'] . '" alt="img">';
+                echo '<span class="price">' . $values['price'] . "</span>";
+                echo '</div>';
+            }
+            echo '</div>';
+        }
+    ?>
+</section>
+
 <!-- Formulaire de réservation : Anne -------------------------------------------->
     <section id="booking">
         
@@ -165,7 +219,6 @@
             <a href="./page2.html" target="_blank"> <img src="Images/livraison2.jpg" alt="scooter"></a>
         </div>
     </section>
-
 
 <!-- Footer: Anne   -------------------------------------------------->
     <footer id="contact">

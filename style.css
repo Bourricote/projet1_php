@@ -137,6 +137,52 @@ article img{
 }
 /* END -- Section article card -- Paul*/
 
+/* Plats et prix PHP */
+
+#prices{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.type_course{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+#prices img{
+    width: 300px;
+}
+
+#prices h3{
+    font-size: 2rem;
+}
+
+.course_name{
+    padding: 0.5rem;
+    position: relative;
+    top: 2rem;
+    left: 1rem;
+    z-index: 3;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.price{
+    position: relative;
+    right: 3rem;
+    bottom: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* END - Plats et prix PHP */
+
 /* formulaire réservation */
 
 #booking{

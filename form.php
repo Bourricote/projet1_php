@@ -14,71 +14,43 @@
     </head>
 
     <body class="page-2">
-        <header>
-        
-        
-        
-            <nav class="navbar" id="myTopnav">
-            
-                
-                <a href="./index.php" id="texte">
-                    <h2>The Central Pub</h2>
-                </a>
-                <a href="./index.php#all-card">Menu</a>
-                <a href="./index.php#all-card">Carte</a>
-                <a href="./index.php#booking">Réservation</a>
-                <a href="page2.php">Livraison</a>
-                <a href="javascript:void(0);" class="icon" onclick="burgerResponsive()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            
-            </nav>
-    
-        
-        </header>
 
-        
-        
-        <!------------------------------------------------------------------------------------------------>
-        
-        
-        
-        <section id="php">
-            <h1 id="php_title"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' a ' . $_POST['hour'] . ' a bien été prise en compte !'; ?></h1>
-            
+        <?php include_once("nav.php");?>
+
+        <section id="form_inputs">
+            <h2 id="thx"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' à ' . $_POST['hour'] . ' pour ' . $_POST['nb_people'] . ' personnes' . ' a bien été prise en compte !'; ?></h2>
+            <p id="form_message">
+                <?php
+                    echo 'Votre message à notre attention :<br>';
+                    echo $_POST['comment'];
+                ?>
+            </p>
         </section>
 
+        <?php
+            if(isset($_POST['name']))
+            {
+                $string = '';
+                foreach ($_POST as $key => $data){
+                    $string .= $_POST[$key];
+                    if ($key != 'comment'){
+                        $string .= ', ';
+                    }
+                }
 
+                $file = date("d-m-Y") . '-bookings.txt';
+                $isStringInFile = file_put_contents($file, $string ."\n", FILE_APPEND | LOCK_EX);
+                if($isStringInFile === false) {
+                    die('There was an error writing this file');
+                }
+            }
+            else {
+                die('no post data to process');
+            }
+        ?>
 
-        <footer>
-            <div class="div_img_footer">
-                <img src="Images/logo.png" alt="logo Central Pub" id="logo_footer"/>
-            </div>
-            <div class="footer_div" id="horaires">
-                <h3>Horaires d'ouverture</h3>
-                <p>Nous sommes ouverts 7j/7</p>
-                <p>de 9h00 à 2h00</p>
-                <p>Service en continu</p>
-            </div>
-            <div class="footer_div" id="contact">
-                <p>7 Quai des Queyries</p>
-                <p>33800 Bordeaux</p>
-                <p>05 57 80 38 00</p>
+        <?php include_once("footer.php");?>
 
-            
-                <a href="./index.php#booking">Formulaire de réservation</a>
-                <a href="page2.php" target="_blank">Formulaire de livraison</a>
-            </div>
-            <div class="div_img_footer">
-                <img src="Images/map.png" alt="access map" id="map_footer"/>
-            </div>
-            <div id="social">
-                <a href="https://www.facebook.com/thecentralpubbastide/"><img src="Images/facebook.svg" alt="logo facebook" class="social_logo" /></a>
-                <a href="https://www.instagram.com/thecentralpubbastide/?hl=fr"><img src="Images/insta.svg" alt="logo instagram" class="social_logo"/></a>
-                <a href="#"><img src="Images/twitter.svg" alt="logo twitter" class="social_logo"/></a>
-            </div>
-            <script src="script.js"></script>
-        </footer>
     </body>
 
     </html>

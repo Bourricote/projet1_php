@@ -75,73 +75,15 @@
     </section>
 
 <!-- Plats et prix PHP -->
-<section id="prices">
-    <?php
-        $meals = [
-                'Entrées'    => [
-                        'Salade César' => [
-                                'picture' => 'Images/salade.jpg',
-                                'price' => '5€',
-                                ],
-                        'Croquettes de Brie' => [
-                                'picture' => 'Images/croquettes.jpg',
-                                'price' => '6€',
-                                ],
-                        'Assiette de charcuterie' => [
-                                'picture' => 'Images/charcuterie.jpg',
-                                'price' => '8€',
-                                ],
-                        ],
-                'Plats'     => [
-                        'Hamburger' => [
-                                'picture' => 'Images/burger.jpg',
-                                'price' => '10€',
-                                ],
-                        'Fish and Chips' => [
-                                'picture' => 'Images/fish.jpg',
-                                'price' => '12€',
-                                ],
-                        'Lasagnes' => [
-                                'picture' => 'Images/lasagnes.jpg',
-                                'price' => '11€',
-                                ],
-                        ],
-                'Desserts' => [
-                    'Moelleux au chocolat' => [
-                                'picture' => 'Images/moelleux.jpg',
-                                'price' => '6€',
-                                ],
-                    'Tiramisu' => [
-                                'picture' => 'Images/tiramisu.jpg',
-                                'price' => '7€',
-                                ],
-                    'Poire belle Hélène' => [
-                                'picture' => 'Images/poire.jpg',
-                                'price' => '8€',
-                                ],
-                        ],
-
-                ];
-
-        foreach ($meals as $typeCourse => $courses){
-            echo '<h3>' . $typeCourse . '</h3>';
-            echo '<div class="type_course">';
-            foreach ($courses as $key => $values){
-                echo '<div class="course">';
-                echo '<h4 class="course_name">' . $key . '</h4>';
-                echo '<img src="'. $values['picture'] . '" alt="img">';
-                echo '<span class="price">' . $values['price'] . "</span>";
-                echo '</div>';
-            }
-            echo '</div>';
-        }
-    ?>
-</section>
+    <section id="prices">
+        <?php include_once('plats.php');?>
+    </section>
 
 <!-- Formulaire de réservation : Anne -------------------------------------------->
     <section id="booking">
         
         <h2>Réservez votre table en ligne</h2>
+
         <form action="form.php" method="POST">
             <div class="form1">
                 <div class="form_item">
@@ -156,11 +98,11 @@
             <div class="form1">
                 <div class="form_item">
                     <label for="phone">Téléphone</label>
-                    <input type="tel" id="phone" placeholder="Entrez votre numéro de Téléphone" required pattern="[0-9]{10}">
+                    <input type="tel" id="phone" name ="phone" placeholder="Entrez votre numéro de Téléphone" required pattern="[0-9]{10}">
                 </div>
                 <div class="form_item">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Entrez votre email" required>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
                 </div>
             </div>
             <div class="form_item">
@@ -196,7 +138,7 @@
             </div>
             <label for="comment">Commentaire</label>
             <textarea id="comment" name="comment" placeholder="Merci de nous préciser si vous avez des allergies ou un handicap afin que nous puissions vous accueillir au mieux"></textarea>
-            <button type="submit" id="booking_button">RESERVER</button>
+            <input type="submit" id="booking_button" value="Réserver">
         </form>
 
     </section>

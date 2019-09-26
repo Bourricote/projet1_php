@@ -17,6 +17,26 @@
 
         <?php include_once("nav.php");?>
 
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if(empty($_POST['name'])){
+                    echo '<p>' . 'Merci de renseigner votre nom' . '</p>';
+                }
+                if(empty($_POST['first_name'])){
+                    echo 'Merci de renseigner votre prénom';
+                }
+                if(preg_match('#[0-9]{10}#', $_POST['phone']) === 0){
+                    echo 'Merci de renseigner votre numéro de téléphone (10 chiffres de 0 à 9)';
+                }
+                if(preg_match('#[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})#', $_POST['email']) === 0){
+                    echo 'Merci de renseigner une adresse email valide';
+                }
+            } else {
+                exit('Invalid Request');
+            }
+
+        ?>
+
         <section id="form_inputs">
             <h2 id="thx"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' à ' . $_POST['hour'] . ' pour ' . $_POST['nb_people'] . ' personnes' . ' a bien été prise en compte !'; ?></h2>
             <p id="form_message">

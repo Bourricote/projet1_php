@@ -17,36 +17,60 @@
 
         <?php include_once("nav.php");?>
 
-        <?php
+        <section id="form_inputs">
+
+            <!-- Vérifie si les différents champs du formulaire sont bien remplis -->
+            <?php
+            $isFormComplete = true;
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if(empty($_POST['name'])){
-                    echo '<p>' . 'Merci de renseigner votre nom' . '</p>';
+                    $isFormComplete = false;
+                    $errorMessage = 'Merci de renseigner votre nom';
                 }
                 if(empty($_POST['first_name'])){
-                    echo 'Merci de renseigner votre prénom';
+                    $isFormComplete = false;
+                    $errorMessage = 'Merci de renseigner votre prénom';
                 }
                 if(preg_match('#[0-9]{10}#', $_POST['phone']) === 0){
-                    echo 'Merci de renseigner votre numéro de téléphone (10 chiffres de 0 à 9)';
+                    $isFormComplete = false;
+                    $errorMessage = 'Merci de renseigner votre numéro de téléphone (10 chiffres de 0 à 9)';
                 }
                 if(preg_match('#[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})#', $_POST['email']) === 0){
-                    echo 'Merci de renseigner une adresse email valide';
+                    $isFormComplete = false;
+                    $errorMessage = 'Merci de renseigner une adresse email valide';
                 }
             } else {
+                $isFormComplete = false;
                 exit('Invalid Request');
             }
 
-        ?>
+            //Si formulaire bien rempli, affiche message de remerciement
+            if ($isFormComplete) : ?>
 
-        <section id="form_inputs">
-            <h2 id="thx"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' à ' . $_POST['hour'] . ' pour ' . $_POST['nb_people'] . ' personnes' . ' a bien été prise en compte !'; ?></h2>
+            <h2 id="thank_message"> <?php echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' à ' . $_POST['hour'] . ' pour ' . $_POST['nb_people'] . ' personnes' . ' a bien été prise en compte !'; ?></h2>
             <p id="form_message">
                 <?php
-                    echo 'Votre message à notre attention :<br>';
-                    echo $_POST['comment'];
+                    if(!empty($_POST['comment'])) {
+                        echo 'Votre message à notre attention :<br>';
+                        echo $_POST['comment'];
+                    }
                 ?>
             </p>
+
+            <!-- Sinon affiche message d'erreur -->
+            <?php else : ?>
+
+                <p id="form_message">
+                    <?php
+                    echo $errorMessage;
+                    ?>
+                </p>
+
+            <?php endif; ?>
+
         </section>
 
+        <!-- Insère les données du formulaire dans un fichier .text différent chaque jour -->
         <?php
             if(isset($_POST['name']))
             {

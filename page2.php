@@ -17,10 +17,6 @@
 
         <?php include_once ("nav.php");?>
 
-        <!------------------------------------------------------------------------------------------------>
-        
-        
-        
         <section class="section-p2">
             <form method="post" action="index.php" class="p2">
                 <div class="adress-page2">
@@ -84,13 +80,16 @@
                     </select><br>
                 </p>
                 <p class="button-page2">
-                    <button class="js" onclick="confirm()">Envoyer</button>
+                    <button id="confirmButton">Envoyer</button>
                 </p>
             </form>
             
         </section>
 
         <?php include_once("footer.php");?>
+
+        <script src="script.js"></script>
+
     </body>
 
     </html>

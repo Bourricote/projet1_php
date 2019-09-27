@@ -23,25 +23,31 @@ body{
   align-items: center;
 }
 
-.navbar a { 
-  color :#58B19F; 
-  font-size: 1.2rem; 
-}
-
 #texte{
-  color: black;
+    color: black;
+    text-decoration: none;
 }
 #texte:hover{
     color:#fad390;
 }
 
-.navbar a:link{
+.menu_link {
+  color :#58B19F; 
+  font-size: 1.2rem; 
+}
+
+.menu_link:link{
   text-decoration:none;
 }
 
-.navbar a:hover{
+.menu_link:hover{
   text-decoration:none;
   color: #fad390;
+}
+
+.menu_link.active{
+    color: #fad390;
+    font-weight: bold;
 }
 
 /* Dominique : Fin NavBar*/
@@ -145,7 +151,7 @@ article img{
 }
 
 #prices img{
-    width: 300px;
+    width: 400px;
 }
 
 #prices h3{
@@ -154,9 +160,10 @@ article img{
 }
 
 .course_name{
+    font-size: 1.5rem;
     padding: 0.5rem;
     position: relative;
-    top: 2rem;
+    top: 2.5rem;
     left: 1rem;
     z-index: 3;
     color: black;
@@ -346,11 +353,6 @@ footer{
 
 /* Section d'Adrien - Page 2 */
 
-
-.section-p2 {
-    background-color: #fad390;
-    
-}
 .p2 {  
     display: flex;
     flex-direction: column;
@@ -390,11 +392,9 @@ footer{
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2, #livraison-page2 {
     height: 30px;
 }
-.js{
+#confirmButton{
     cursor: pointer;
 }
-
-
 
 /* Fin de la section d'Adrien - Page 2 */
 
@@ -607,14 +607,13 @@ footer{
         height: 100vh;
     }
     .p2 {
-        background : url(Images/order.jpg) no-repeat;
-        background-size: 250%;
-        color: white;
+        background-color: #F4F4F4;
+        color: black;
         box-shadow: black 5px 2px 10px;
         border-radius: 10px;
+        margin: 6rem auto;
     }
-    .section-p2 { 
-        background-color: transparent;
+    .section-p2 {
         width: 80%;
         margin: auto;
     }

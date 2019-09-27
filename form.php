@@ -22,22 +22,23 @@
             <!-- Vérifie si les différents champs du formulaire sont bien remplis -->
             <?php
             $isFormComplete = true;
+            $errorMessage = 'Merci de renseigner votre ' . '<br>';
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if(empty($_POST['name'])){
                     $isFormComplete = false;
-                    $errorMessage = 'Merci de renseigner votre nom';
+                    $errorMessage .= 'nom' . '<br>';
                 }
                 if(empty($_POST['first_name'])){
                     $isFormComplete = false;
-                    $errorMessage = 'Merci de renseigner votre prénom';
+                    $errorMessage .= 'prénom' . '<br>';
                 }
                 if(preg_match('#[0-9]{10}#', $_POST['phone']) === 0){
                     $isFormComplete = false;
-                    $errorMessage = 'Merci de renseigner votre numéro de téléphone (10 chiffres de 0 à 9)';
+                    $errorMessage .= 'votre numéro de téléphone (10 chiffres de 0 à 9)' . '<br>';
                 }
                 if(preg_match('#[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})#', $_POST['email']) === 0){
                     $isFormComplete = false;
-                    $errorMessage = 'Merci de renseigner une adresse email valide';
+                    $errorMessage .= 'une adresse email valide';
                 }
             } else {
                 $isFormComplete = false;
@@ -82,7 +83,7 @@
                     }
                 }
 
-                $file = date("d-m-Y") . '-bookings.txt';
+                $file = date("Y-m-d") . '-bookings.txt';
                 $isStringInFile = file_put_contents($file, $string ."\n", FILE_APPEND | LOCK_EX);
                 if($isStringInFile === false) {
                     die('There was an error writing this file');

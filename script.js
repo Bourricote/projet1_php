@@ -1,5 +1,4 @@
 /*Menu burger = header.php*/
-
 const navBar = document.getElementById("myTopnav");
 const burgerIcon = document.getElementById("burger_icon");
 burgerIcon.addEventListener('click', () => {
@@ -33,12 +32,11 @@ window.addEventListener('DOMMouseScroll', () => {
     if (linkActives[0].className === 'menu_link active') {
         linkActives[0].className = 'menu_link';
     }
-})
+});
 
 /*Message confirmation = page2.php*/
-/*
 const confirmButton = document.getElementById('confirmButton');
 
 confirmButton.addEventListener('click', () => {
     alert('Commande validée, vous allez être redirigé vers l\'accueil');
-});*/
+});

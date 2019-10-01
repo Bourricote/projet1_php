@@ -197,6 +197,10 @@ h2{
     text-align: center;
 }
 
+.error{
+    color: red;
+}
+
 #booking, #livraison{
     display: flex;
     flex-direction: column;

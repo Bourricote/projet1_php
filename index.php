@@ -1,3 +1,9 @@
+<?php
+$nameErr = $first_nameErr = $emailErr = $phoneErr = "";
+$name = $first_name = $email = $phone = "";
+include_once('functions.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -84,25 +90,29 @@
         
         <h2>Réservez votre table en ligne</h2>
 
-        <form action="form.php" method="POST">
+        <form action="index.php#booking" method="POST">
             <div class="form1">
                 <div class="form_item">
                     <label for="name">Nom</label>
                     <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+                    <p class="error"><?php echo $nameErr;?></p>
                 </div>
                 <div class="form_item">
                     <label for="first_name">Prénom</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prénom" required>
+                    <p class="error"><?php echo $first_nameErr;?></p>
                 </div>
             </div>
             <div class="form1">
                 <div class="form_item">
                     <label for="phone">Téléphone</label>
-                    <input type="tel" id="phone" name ="phone" placeholder="Entrez votre numéro de Téléphone" required pattern="[0-9]{10}">
+                    <input type="tel" id="phone" name ="phone" placeholder="Entrez votre numéro de Téléphone" pattern="[0-9]{10}" required>
+                    <p class="error"><?php echo $phoneErr;?></p>
                 </div>
                 <div class="form_item">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                    <p class="error"><?php echo $emailErr;?></p>
                 </div>
             </div>
             <div class="form_item">
@@ -140,6 +150,24 @@
             <textarea id="comment" name="comment" placeholder="Merci de nous préciser si vous avez des allergies ou un handicap afin que nous puissions vous accueillir au mieux"></textarea>
             <input type="submit" id="booking_button" value="Réserver">
         </form>
+
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if ($isFormComplete){?>
+                <h2 id="thank_message">
+                    <?php
+                    echo 'Merci ' . $_POST['first_name'] . ' ' . $_POST['name'] . ', votre réservation pour le '. date("d M Y", strtotime($_POST['date'])) . ' à ' . $_POST['hour'] . ' pour ' . $_POST['nb_people'] . ' personnes' . ' a bien été prise en compte !';
+                    ?>
+                </h2>
+                <p id="form_message">
+                    <?php
+                    if(!empty($_POST['comment'])) {
+                        echo 'Votre message à notre attention :<br>';
+                        echo $_POST['comment'];
+                    }
+                    ?>
+                </p>
+        <?php }} ?>
 
     </section>
 

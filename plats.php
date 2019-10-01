@@ -52,9 +52,8 @@ foreach ($meals as $typeCourse => $courses) {
         echo '<div class="course">';
         echo '<h4 class="course_name">' . $key . '</h4>';
         echo '<img src="' . $values['picture'] . '" alt="img">';
-        echo '<span class="price">' . $values['price'] . "</span>";
+        echo '<span class="price">' . $values['price'] . '</span>';
         echo '</div>';
     }
     echo '</div>';
 }
-?>

@@ -7,17 +7,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(empty($_POST['name'])){
         $isFormComplete = false;
         $nameErr = 'Merci de renseigner votre nom';
+    } else {
+        $name = $_POST['name'];
     }
 
     if(empty($_POST['first_name'])){
         $isFormComplete = false;
         $first_nameErr = 'Merci de renseigner votre prénom';
+    } else {
+        $first_name = $_POST['first_name'];
     }
 
     if(empty($_POST['phone'])) {
         $phoneErr = 'Merci de renseigner votre numéro de téléphone';
         $isFormComplete = false;
     } else {
+        $phone = $_POST['phone'];
         if (!preg_match("/[0-9]{10}/", $_POST["phone"])) {
             $phoneErr = 'Merci de renseigner un numéro de téléphone valide (10 chiffres)';
             $isFormComplete = false;
@@ -28,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $isFormComplete = false;
         $emailErr = 'Merci de renseigner votre adresse mail';
     } else {
+        $email = $_POST['email'];
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $emailErr = 'Merci de renseigner une adresse email valide';
             $isFormComplete = false;

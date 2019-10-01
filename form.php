@@ -19,8 +19,6 @@
 
         <section id="form_inputs">
 
-
-
             <h2 id="thank_message">
                 <?php
                     var_dump($_POST);

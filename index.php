@@ -94,24 +94,24 @@ include_once('functions.php');
             <div class="form1">
                 <div class="form_item">
                     <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+                    <input type="text" id="name" name="name" placeholder="Entrez votre nom" value="<?= $name ?>" required>
                     <p class="error"><?php echo $nameErr;?></p>
                 </div>
                 <div class="form_item">
                     <label for="first_name">Prénom</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prénom" required>
+                    <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prénom" value="<?= $first_name ?>" required>
                     <p class="error"><?php echo $first_nameErr;?></p>
                 </div>
             </div>
             <div class="form1">
                 <div class="form_item">
                     <label for="phone">Téléphone</label>
-                    <input type="tel" id="phone" name ="phone" placeholder="Entrez votre numéro de Téléphone" pattern="[0-9]{10}" required>
+                    <input type="tel" id="phone" name ="phone" placeholder="Entrez votre numéro de Téléphone" pattern="[0-9]{10}" value="<?= $phone ?>" required>
                     <p class="error"><?php echo $phoneErr;?></p>
                 </div>
                 <div class="form_item">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre email" value="<?= $email ?>" required>
                     <p class="error"><?php echo $emailErr;?></p>
                 </div>
             </div>

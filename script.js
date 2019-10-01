@@ -5,17 +5,6 @@ burgerIcon.addEventListener('click', () => {
     navBar.classList.toggle('responsive')
 });
 
-
-/* 1ère version du menu burger
-function burgerResponsive() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "navbar") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar";
-    }
-}*/
-
 /*Modif éléments du menu au clic et scroll*/
 
 const menuLinks = document.getElementsByClassName("menu_link");

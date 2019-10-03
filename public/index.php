@@ -16,7 +16,7 @@ include_once('../src/functions.php');
         <div class="main-card">
             <article>
                 <div class="card">
-                    <img src="../Images/img-carte.jpg" alt="menu">
+                    <img src="../asset/Images/img-carte.jpg" alt="menu">
                     <h1 class="card-title">Menu midi</h1>
                     <div class="card-visibility">
                         <div class="start">
@@ -39,7 +39,7 @@ include_once('../src/functions.php');
             </article>
             <article>
                 <div class="card">
-                    <img src="../Images/img-articles-ardoise.jpg" alt="ardoise">
+                    <img src="../asset/Images/img-articles-ardoise.jpg" alt="ardoise">
                     <h1 class="card-title">Carte</h1>
                     <div class="card-visibility">
                         <div class="start">
@@ -64,9 +64,17 @@ include_once('../src/functions.php');
     </section>
 
 <!-- Plats et prix PHP -->
-    <section id="prices">
+    <section id="dishes">
+        <h2>Carte</h2>
         <?php include_once('plats.php');?>
     </section>
+
+<!-- Boissons -->
+    <section id="drinks">
+        <h2>Boissons</h2>
+        <?php include_once('boissons.php');?>
+    </section>
+
 
 <!-- Formulaire de réservation : Anne -------------------------------------------->
     <section id="booking">
@@ -159,7 +167,7 @@ include_once('../src/functions.php');
         <h2>Faites-vous livrer à domicile !</h2>
         <div id="link_livraison">
             <a href="page2.php" target="_blank" id="link">Faites-vous livrer !</a>
-            <a href="page2.php" target="_blank"> <img src="../Images/livraison2.jpg" alt="scooter"></a>
+            <a href="page2.php" target="_blank"> <img src="../asset/Images/livraison2.jpg" alt="scooter"></a>
         </div>
     </section>
 

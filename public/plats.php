@@ -2,43 +2,43 @@
 $meals = [
     'Entrées' => [
         'Salade César' => [
-            'picture' => '../Images/salade.jpg',
+            'picture' => '../asset/Images/salade.jpg',
             'price' => '5€',
         ],
         'Croquettes de Brie' => [
-            'picture' => '../Images/croquettes.jpg',
+            'picture' => '../asset/Images/croquettes.jpg',
             'price' => '6€',
         ],
         'Assiette de charcuterie' => [
-            'picture' => '../Images/charcuterie.jpg',
+            'picture' => '../asset/Images/charcuterie.jpg',
             'price' => '8€',
         ],
     ],
     'Plats' => [
         'Hamburger' => [
-            'picture' => '../Images/burger.jpg',
+            'picture' => '../asset/Images/burger.jpg',
             'price' => '10€',
         ],
         'Fish and Chips' => [
-            'picture' => '../Images/fish.jpg',
+            'picture' => '../asset/Images/fish.jpg',
             'price' => '12€',
         ],
         'Lasagnes' => [
-            'picture' => '../Images/lasagnes.jpg',
+            'picture' => '../asset/Images/lasagnes.jpg',
             'price' => '11€',
         ],
     ],
     'Desserts' => [
         'Moelleux au chocolat' => [
-            'picture' => '../Images/moelleux.jpg',
+            'picture' => '../asset/Images/moelleux.jpg',
             'price' => '6€',
         ],
         'Tiramisu' => [
-            'picture' => '../Images/tiramisu.jpg',
+            'picture' => '../asset/Images/tiramisu.jpg',
             'price' => '7€',
         ],
         'Poire belle Hélène' => [
-            'picture' => '../Images/poire.jpg',
+            'picture' => '../asset/Images/poire.jpg',
             'price' => '8€',
         ],
     ],

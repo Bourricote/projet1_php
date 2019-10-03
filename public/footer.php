@@ -1,6 +1,6 @@
 <footer id="contact">
     <div class="div_img_footer">
-        <img src="../Images/logo.png" alt="logo Central Pub" id="logo_footer"/>
+        <img src="../asset/Images/logo.png" alt="logo Central Pub" id="logo_footer"/>
     </div>
     <div class="footer_div" id="horaires">
         <h3>Horaires d'ouverture</h3>
@@ -16,12 +16,12 @@
         <a href="page2.php" target="_blank">Formulaire de livraison</a>
     </div>
     <div class="div_img_footer">
-        <img src="../Images/map.png" alt="access map" id="map_footer"/>
+        <img src="../asset/Images/map.png" alt="access map" id="map_footer"/>
     </div>
     <div id="social">
-        <a href="https://www.facebook.com/thecentralpubbastide/"><img src="../Images/facebook.svg" alt="logo facebook" class="social_logo" /></a>
-        <a href="https://www.instagram.com/thecentralpubbastide/?hl=fr"><img src="../Images/insta.svg" alt="logo instagram" class="social_logo"/></a>
-        <a href="#"><img src="../Images/twitter.svg" alt="logo twitter" class="social_logo"/></a>
+        <a href="https://www.facebook.com/thecentralpubbastide/"><img src="../asset/Images/facebook.svg" alt="logo facebook" class="social_logo" /></a>
+        <a href="https://www.instagram.com/thecentralpubbastide/?hl=fr"><img src="../asset/Images/insta.svg" alt="logo instagram" class="social_logo"/></a>
+        <a href="#"><img src="../asset/Images/twitter.svg" alt="logo twitter" class="social_logo"/></a>
     </div>
 </footer>
 

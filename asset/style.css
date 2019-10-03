@@ -55,12 +55,12 @@ body{
 /*Section article card -- Paul*/
 
 .banniere{
-    background: url(../Images/banniere-bc.jpg) no-repeat center fixed;
+    background: url(Images/banniere-bc.jpg) no-repeat center fixed;
     background-size: cover;
     height: 95vh;
 }
 .container-logo{
-    background: url(../Images/logo.png) no-repeat center fixed;
+    background: url(Images/logo.png) no-repeat center fixed;
     height: 95vh;
 }
 
@@ -136,7 +136,7 @@ article img{
 
 /* Plats et prix PHP */
 
-#prices{
+#dishes{
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -150,11 +150,11 @@ article img{
     margin-bottom: 1rem;
 }
 
-#prices img{
+#dishes img{
     width: 400px;
 }
 
-#prices h3{
+#dishes h3{
     font-size: 2rem;
     padding: 0 2rem;
 }
@@ -179,6 +179,17 @@ article img{
 }
 
 /* END - Plats et prix PHP */
+
+/* Boissons PDO */
+
+#drinks{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+/* END - Boissons PDO */
 
 /* formulaire réservation */
 
@@ -606,7 +617,7 @@ footer{
         width: 30%;
     }
     .page-2 {
-        background: url(../Images/img-page2.jpg) no-repeat;
+        background: url(Images/img-page2.jpg) no-repeat;
         background-size: cover;
         height: 100vh;
     }

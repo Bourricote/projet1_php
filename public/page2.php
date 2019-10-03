@@ -1,21 +1,4 @@
-
-    <!DOCTYPE html>
-    <html lang="fr">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Dominique, Paul, Adrien, Anne">
-        <meta name="description" content="Présentation d'un pub mythique de Bordeaux !">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>The Central Pub</title>
-    </head>
-
-    <body class="page-2">
-
-        <?php include_once ("nav.php");?>
+<?php include_once('header.php');?>
 
         <section class="section-p2">
             <form method="post" action="index.php" class="p2">
@@ -86,10 +69,4 @@
             
         </section>
 
-        <?php include_once("footer.php");?>
-
-        <script src="script.js"></script>
-
-    </body>
-
-    </html>
+<?php include_once('footer.php');?>

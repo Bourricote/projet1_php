@@ -55,12 +55,12 @@ body{
 /*Section article card -- Paul*/
 
 .banniere{
-    background: url(Images/banniere-bc.jpg) no-repeat center fixed;
+    background: url(../Images/banniere-bc.jpg) no-repeat center fixed;
     background-size: cover;
     height: 95vh;
 }
 .container-logo{
-    background: url(Images/logo.png) no-repeat center fixed;
+    background: url(../Images/logo.png) no-repeat center fixed;
     height: 95vh;
 }
 
@@ -606,7 +606,7 @@ footer{
         width: 30%;
     }
     .page-2 {
-        background: url(Images/img-page2.jpg) no-repeat;
+        background: url(../Images/img-page2.jpg) no-repeat;
         background-size: cover;
         height: 100vh;
     }
@@ -622,8 +622,3 @@ footer{
         margin: auto;
     }
 }
-
-
-
-
-

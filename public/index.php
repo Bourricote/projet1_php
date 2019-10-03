@@ -1,30 +1,13 @@
 <?php
 $nameErr = $first_nameErr = $emailErr = $phoneErr = "";
 $name = $first_name = $email = $phone = "";
-include_once('functions.php');
+include_once('../src/functions.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Dominique, Paul, Adrien, Anne">
-    <meta name="description" content="Présentation d'un pub mythique de Bordeaux !">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>The Central Pub</title>
-</head>
-
-<body>
-<!-- Header : nav et bannière : Dominique ------------------------------->
-
-    <?php include_once ("nav.php");?>
+<?php include_once('header.php');?>
 
     <div class="banniere"></div>
     <div class="container-logo"></div>
-
 
 <!-- Articles : Paul ------------------------------------------------->
 
@@ -33,7 +16,7 @@ include_once('functions.php');
         <div class="main-card">
             <article>
                 <div class="card">
-                    <img src="Images/img-carte.jpg" alt="menu">
+                    <img src="../Images/img-carte.jpg" alt="menu">
                     <h1 class="card-title">Menu midi</h1>
                     <div class="card-visibility">
                         <div class="start">
@@ -56,7 +39,7 @@ include_once('functions.php');
             </article>
             <article>
                 <div class="card">
-                    <img src="Images/img-articles-ardoise.jpg" alt="ardoise">
+                    <img src="../Images/img-articles-ardoise.jpg" alt="ardoise">
                     <h1 class="card-title">Carte</h1>
                     <div class="card-visibility">
                         <div class="start">
@@ -176,13 +159,10 @@ include_once('functions.php');
         <h2>Faites-vous livrer à domicile !</h2>
         <div id="link_livraison">
             <a href="page2.php" target="_blank" id="link">Faites-vous livrer !</a>
-            <a href="page2.php" target="_blank"> <img src="Images/livraison2.jpg" alt="scooter"></a>
+            <a href="page2.php" target="_blank"> <img src="../Images/livraison2.jpg" alt="scooter"></a>
         </div>
     </section>
 
 <!-- Footer: Anne   -------------------------------------------------->
-    <?php include_once("footer.php");?>
-    
-<script src="script.js"></script>
-</body>
-</html>
+    <?php include_once('footer.php');?>
+

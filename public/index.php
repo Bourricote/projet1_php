@@ -66,13 +66,13 @@ include_once('../src/functions.php');
 <!-- Plats et prix PHP -->
 <section id="dishes">
     <h2>Carte</h2>
-    <?php include_once('plats.php'); ?>
+    <?php include_once('meals.php'); ?>
 </section>
 
 <!-- Boissons -->
 <section id="drinks">
     <h2>Boissons</h2>
-    <?php include_once('boissons.php'); ?>
+    <?php include_once('drinks.php'); ?>
 </section>
 
 

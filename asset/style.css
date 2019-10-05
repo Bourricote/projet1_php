@@ -2,50 +2,52 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 /* set font for body */
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
+
 /* reset settings */
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /*Dominique: Top Bar Début*/
 .navbar {
-  position: fixed;
-  top:0;
-  z-index: 4;
-  width: 100%; 
-  background-color: rgba(255, 255, 255, 0.9);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#texte{
+#texte {
     color: black;
     text-decoration: none;
 }
-#texte:hover{
-    color:#fad390;
+
+#texte:hover {
+    color: #fad390;
 }
 
 .menu_link {
-  color :#58B19F; 
-  font-size: 1.2rem; 
+    color: #58B19F;
+    font-size: 1.2rem;
 }
 
-.menu_link:link{
-  text-decoration:none;
+.menu_link:link {
+    text-decoration: none;
 }
 
-.menu_link:hover{
-  text-decoration:none;
-  color: #fad390;
+.menu_link:hover {
+    text-decoration: none;
+    color: #fad390;
 }
 
-.menu_link.active{
+.menu_link.active {
     color: #fad390;
     font-weight: bold;
 }
@@ -54,39 +56,44 @@ body{
 
 /*Section article card -- Paul*/
 
-.banniere{
+.banniere {
     background: url(Images/banniere-bc.jpg) no-repeat center fixed;
     background-size: cover;
     height: 95vh;
 }
-.container-logo{
+
+.container-logo {
     background: url(Images/logo.png) no-repeat center fixed;
     height: 95vh;
 }
 
 #all-card {
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
-.main-card{
-    display:flex;
+
+.main-card {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.card{
+
+.card {
     position: relative;
     height: 350px;
     margin-bottom: 30px;
     text-align: center;
-    overflow:hidden;
+    overflow: hidden;
 }
-article img{
+
+article img {
     height: 100%;
 }
-.card-title{
-    color : #FFF;
+
+.card-title {
+    color: #FFF;
     margin: 0;
     transform: translateY(-215px);
     opacity: 1;
@@ -94,41 +101,45 @@ article img{
     font-size: 3rem;
 }
 
-.prix-menu-midi{
-    font-size:2rem;
+.prix-menu-midi {
+    font-size: 2rem;
 }
-.card-visibility{
+
+.card-visibility {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     transform: translateY(-429px);
     font-weight: bold;
     font-size: 1.5rem;
-    z-index:2;
-    height:100%;
-    width : 95%;
+    z-index: 2;
+    height: 100%;
+    width: 95%;
     margin-left: auto;
     transition: all 1s;
     color: #58B19F;
     margin-right: -90%;
 }
 
-.opacity{
+.opacity {
     height: 100%;
-    width:0;
+    width: 0;
     margin-left: auto;
     transform: translateY(-779px);
     background-color: #fad390;
     transition: width 1s;
 }
-.card:hover .card-visibility{
+
+.card:hover .card-visibility {
     margin-right: 0 !important;
 }
-.card:hover .card-title{
+
+.card:hover .card-title {
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
 }
-.card:hover .opacity{
+
+.card:hover .opacity {
     width: 95%;
 }
 
@@ -136,30 +147,30 @@ article img{
 
 /* Plats et prix PHP */
 
-#prices{
+#dishes {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
 }
 
-.type_course{
+.type_course {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 1rem;
 }
 
-#prices img{
+#dishes img {
     width: 400px;
 }
 
-#prices h3{
+#dishes h3 {
     font-size: 2rem;
     padding: 0 2rem;
 }
 
-.course_name{
+.course_name {
     font-size: 1.5rem;
     padding: 0.5rem;
     position: relative;
@@ -170,7 +181,7 @@ article img{
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.price{
+.price {
     position: relative;
     right: 3rem;
     bottom: 1rem;
@@ -180,24 +191,39 @@ article img{
 
 /* END - Plats et prix PHP */
 
+/* Boissons PDO */
+
+#drinks {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}
+
+/* END - Boissons PDO */
+
 /* formulaire réservation */
 
-#booking{
+#booking {
     background-color: #fad390;
 }
 
-hr{
+hr {
     border: #626662 1px solid;
     width: 80%;
     margin: 2rem;
 }
 
-h2{
+h2 {
     margin: 1rem;
     text-align: center;
 }
 
-#booking, #livraison{
+.error {
+    color: red;
+}
+
+#booking, #livraison {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -206,35 +232,35 @@ h2{
     padding-bottom: 3rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-input, textarea, select, label{
-   margin: 0.7rem;
+input, textarea, select, label {
+    margin: 0.7rem;
 }
 
-input{
-   height: 20px;
+input {
+    height: 20px;
 }
 
-select{
+select {
     height: 25px;
 }
 
-textarea{
+textarea {
     height: 100px;
 }
 
-.form1{
+.form1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-#booking_button{
+#booking_button {
     width: 15%;
     height: 50px;
     border-radius: 10px;
@@ -246,23 +272,23 @@ textarea{
     margin-right: 1rem;
 }
 
-#booking_button:hover{
+#booking_button:hover {
     background-color: #58B19F;
     cursor: pointer;
 }
 
 /* Livraison */
 
-#livraison{
+#livraison {
     background-color: #F4F4F4;
 }
 
-#link_livraison{
+#link_livraison {
     display: flex;
     flex-direction: column;
 }
 
-#link{
+#link {
     position: relative;
     top: 12rem;
     padding: 0.5rem;
@@ -277,93 +303,96 @@ textarea{
     text-align: center;
 }
 
-#link:visited{
+#link:visited {
     color: black;
 }
 
-#link:hover{
+#link:hover {
     background-color: #58B19F;
 }
 
-#link_livraison img{
+#link_livraison img {
     height: 250px;
     border-radius: 10px;
     opacity: 0.8;
 }
 
 /* Footer */
-footer{
+footer {
     display: flex;
     background-color: #58B19F;
     justify-content: space-around;
     height: 350px;
 }
 
-.div_img_footer{
+.div_img_footer {
     display: flex;
 }
 
-#logo_footer{
+#logo_footer {
     width: 250px;
     margin: auto;
 }
 
-#map_footer{
+#map_footer {
     width: 300px;
     margin: auto;
 }
 
-.footer_div{
+.footer_div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.footer_div h3, .footer_div p, .footer_div a{
+
+.footer_div h3, .footer_div p, .footer_div a {
     padding: 0.5rem;
 }
 
-.footer_div a{
+.footer_div a {
     text-decoration: none;
     font-weight: bold;
 }
 
-.footer_div a:link{
+.footer_div a:link {
     color: black;
 }
 
-.footer_div a:visited{
+.footer_div a:visited {
     color: black;
 }
 
-.footer_div a:hover{
-    color:#fad390;
+.footer_div a:hover {
+    color: #fad390;
 }
 
-#social{
+#social {
     display: flex;
     justify-content: space-around;
     align-self: center;
 }
 
-.social_logo{
+.social_logo {
     width: 80px;
     padding: 1rem;
 }
 
 /* Section d'Adrien - Page 2 */
 
-.p2 {  
+.p2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 75px auto 0 auto; 
+    margin: 75px auto 0 auto;
 }
+
 .adress-page2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #numero-page2, #rue-page2, #code-page2, #ville-page2 {
     width: 40%;
 }
@@ -371,36 +400,44 @@ footer{
 .nb-page2 {
     width: 20%;
 }
+
 .nbmidi-page2 {
     width: 15%;
 }
+
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
     width: 50%;
 }
+
 .adress-page2, .menu-page2, .livraison-page2 {
     margin-top: 40px;
 }
+
 .choix-page2 {
     margin-top: 25px;
 }
+
 .button-page2 {
     margin: 50px;
-}   
+}
+
 .p2 input, select {
     margin: 0;
 }
+
 #entree-page2, #plat-page2, #dessert-page2, #boisson-page2, #livraison-page2 {
     height: 30px;
 }
-#confirmButton{
+
+#confirmButton {
     cursor: pointer;
 }
 
 /* Fin de la section d'Adrien - Page 2 */
 
-/* form php */
+/* form.php */
 
-#form_inputs{
+#form_inputs {
     height: 200px;
     width: 70%;
     background-color: #F4F4F4;
@@ -410,202 +447,231 @@ footer{
     flex-direction: column;
 }
 
-#thank_message{
+#thank_message {
     margin: auto 2rem;
 }
 
-#form_message{
+#form_message {
     margin: auto 2rem;
 }
 
-/* fin form php */
+/* fin form.php */
 
 /* debut menu burger */
 
 /* Hide the link that should open and close the navbar on small screens */
 .navbar .icon {
-  display: none;
-} 
+    display: none;
+}
 
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
     /*Section Paul / Articles - Card*/
-    .card{
+    .card {
         height: 300px;
     }
-    .card-title{
+
+    .card-title {
         transform: translateY(-190px);
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
-    .card-visibility{
+
+    .card-visibility {
         transform: translateY(-370px);
         font-size: 1.4rem;
     }
-    .prix-menu-midi{
-        font-size:1.5rem;
+
+    .prix-menu-midi {
+        font-size: 1.5rem;
     }
-    .opacity{
+
+    .opacity {
         transform: translateY(-667px);
     }
 }
 
-@media (max-width: 961px){
-    
+@media (max-width: 961px) {
+
     /* Section article card -- Paul */
-    .banniere{
-        display: none;
-    }
-    .container-logo{
+    .banniere {
         display: none;
     }
 
-    #all-card{
+    .container-logo {
+        display: none;
+    }
+
+    #all-card {
         margin: 0 auto;
     }
-    .main-card{
+
+    .main-card {
         flex-direction: column;
     }
-    #all-card article{
-        margin:0 auto;
+
+    #all-card article {
+        margin: 0 auto;
     }
 
-    .card{
+    .card {
         height: 210px;
     }
-    .card-title{
+
+    .card-title {
         transform: translateY(-130px);
         font-size: 1rem;
     }
-    .card-visibility{
+
+    .card-visibility {
         transform: translateY(-240px);
         font-size: 1rem;
     }
-    .prix-menu-midi{
-        font-size:1.5rem;
+
+    .prix-menu-midi {
+        font-size: 1.5rem;
     }
-    .opacity{
+
+    .opacity {
         transform: translateY(-451px);
     }
 
-    
-    /* END -- Section article card -- Paul*/
-    
-    /* Formulaire */
 
-    form{
+    /* END -- Section article card -- Paul*/
+    /* Formulaire */
+    form {
         width: 75%;
     }
 
-    span{
+    span {
         display: none;
     }
 
-    .form1{
+    .form1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
     }
 
-    .form_item{
+    .form_item {
         display: flex;
         flex-direction: column;
     }
 
-    #booking_button{
+    #booking_button {
         width: 100px;
     }
 
-    h2{
+    h2 {
         font-size: 1.2rem;
     }
 
     /* Livraison */
-
-    #link_livraison img{
+    #link_livraison img {
         height: 200px;
         justify-self: center;
     }
 
-    #link{
+    #link {
         text-align: center;
     }
 
     /* Footer */
-    footer{
+    footer {
         flex-direction: column;
         height: auto;
     }
 
-    .footer_div, .div_img_footer{
+    .footer_div, .div_img_footer {
         margin-bottom: 2rem;
     }
 
 }
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon {
-      float: right;
-      display: block
+    .navbar a:not(:first-child) {
+        display: none;
     }
-    .navbar{
-      display:inline-block;
-    }
-    #all-card{
-        margin-top:25px;
-    }
-    .navbar a:not(:first-child){
-        padding-right:10px;
-    }
-  }
-  
-  /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .navbar.responsive a {
-      float: none;
-      display: block;
-      text-align: right;
-    }
-  } 
-  /* end test burger*/ 
 
-@media screen and (min-width:961px) {
+    .navbar a.icon {
+        float: right;
+        display: block
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    #all-card {
+        margin-top: 25px;
+    }
+
+    .navbar a:not(:first-child) {
+        padding-right: 10px;
+    }
+}
+
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: right;
+    }
+}
+
+/* end test burger*/
+
+@media screen and (min-width: 961px) {
     .adress-page2 {
         display: block;
         align-items: center;
     }
-    #numero-page2  {
+
+    #numero-page2 {
         width: 10%;
     }
+
     #rue-page2 {
         width: 24%;
     }
+
     #code-page2 {
         width: 14%;
-    } 
+    }
+
     #ville-page2 {
         width: 20%;
     }
+
     .nb-page2 {
         width: 8%;
     }
+
     .nbmidi-page2 {
         width: 10%;
     }
+
     #entree-page2, #plat-page2, #dessert-page2, #boisson-page2 {
         width: 30%;
     }
+
     .page-2 {
         background: url(Images/img-page2.jpg) no-repeat;
         background-size: cover;
         height: 100vh;
     }
+
     .p2 {
         background-color: #F4F4F4;
         color: black;
@@ -613,6 +679,7 @@ footer{
         border-radius: 10px;
         margin: 6rem auto;
     }
+
     .section-p2 {
         width: 80%;
         margin: auto;
@@ -620,6 +687,118 @@ footer{
 }
 
 
+/* ADMIN drinks_list.php*/
+#drinks_list {
+    width: 80%;
+    margin: 100px auto;
+}
 
+#drinks_list table {
+    width: 60%;
+    margin: 20px auto;
+}
 
+#drinks_list table, #drinks_list td, #drinks_list th {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
 
+#drinks_list th, #drinks_list td {
+    height: 50px;
+}
+
+#drinks_list table th {
+    background-color: #CBCBCB;
+}
+
+#drinks_list table tbody tr:nth-child(odd) {
+    background-color: #EEEEEE;
+}
+
+#drinks_list table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+#add_drink {
+    display: block;
+    width: 30%;
+    margin: auto;
+    border: #6e6e6e 2px solid;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#add_drink:hover {
+    text-decoration: none;
+    background-color: #CBCBCB;
+}
+
+#add_drink:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* ADMIN new_drink.php */
+.action_drink {
+    width: 40%;
+    margin: 100px auto;
+    padding: 50px;
+    border: 2px solid #6e6e6e;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action_drink input, .action_button {
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.fa-pencil-alt, .fa-times-circle {
+    font-size: 25px;
+}
+
+.fa-pencil-alt {
+    color: #3850ff;
+}
+
+.fa-times-circle {
+    color: #ff2b3c;
+}
+
+/* ADMIN delete.php */
+
+#delete_confirm {
+    margin: 10px;
+    display: flex;
+}
+
+.delete_action {
+    width: 30%;
+    line-height: 50px;
+    border: #6e6e6e 2px solid;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+
+    font-size: 1.5rem;
+}
+
+.delete_action:hover{
+    text-decoration: none;
+    background-color: #CBCBCB;
+    cursor: pointer;
+}

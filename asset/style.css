@@ -150,8 +150,9 @@ article img {
 #dishes {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    padding: 2rem;
     margin: auto;
+    background-color: #fad390;
 }
 
 .type_course {
@@ -168,17 +169,19 @@ article img {
 #dishes h3 {
     font-size: 2rem;
     padding: 0 2rem;
+    margin-left: 3rem;
 }
 
 .course_name {
     font-size: 1.5rem;
     padding: 0.5rem;
     position: relative;
-    top: 2.5rem;
-    left: 1rem;
+    top: 3.5rem;
+    width: 400px;
     z-index: 3;
     color: black;
     background-color: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
 }
 
 .price {
@@ -191,16 +194,34 @@ article img {
 
 /* END - Plats et prix PHP */
 
-/* Boissons PDO */
+/* drinks.php PDO */
 
 #drinks {
     display: flex;
     flex-direction: column;
     width: 60%;
     margin: auto;
+    padding: 2rem;
 }
 
-/* END - Boissons PDO */
+.drinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.drink {
+    display: flex;
+    margin: 1rem;
+}
+
+.drink_name, .drink_price {
+    margin: 5px;
+    font-size: 1.5rem;
+}
+
+
+/* END - drinks.php PDO */
 
 /* formulaire réservation */
 
@@ -217,6 +238,7 @@ hr {
 h2 {
     margin: 1rem;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .error {
@@ -534,7 +556,6 @@ footer {
         transform: translateY(-451px);
     }
 
-
     /* END -- Section article card -- Paul*/
     /* Formulaire */
     form {
@@ -559,10 +580,6 @@ footer {
 
     #booking_button {
         width: 100px;
-    }
-
-    h2 {
-        font-size: 1.2rem;
     }
 
     /* Livraison */
@@ -595,7 +612,8 @@ footer {
 
     .navbar a.icon {
         float: right;
-        display: block
+        display: block;
+        color: #58B19F;
     }
 
     .navbar {

@@ -1,3 +1,5 @@
+// Ce fichier ne sert plus à rien :)
+
 <?php
 include_once('../public/header.php');
 include_once('create_drink.php');

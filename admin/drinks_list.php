@@ -35,6 +35,6 @@ if(isset($_GET['message'])){
         </tbody>
     </table>
 
-    <a id="add_drink" href="new_drink.php">Ajouter une boisson</a>
+    <a id="add_drink" href="create_drink.php">Ajouter une boisson</a>
 </section>
 

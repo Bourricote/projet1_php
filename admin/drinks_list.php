@@ -1,6 +1,7 @@
 <?php
 include_once('../public/header.php');
-include_once('../src/functions.php');
+include_once('../public/nav.php');
+include_once('../src/connection.php');
 
 $message = '';
 if(isset($_GET['message'])){
@@ -12,29 +13,27 @@ if(isset($_GET['message'])){
     <h2><?= $message?></h2>
     <table>
         <thead>
-        <tr>
-            <th>id</th>
-            <th>Boisson</th>
-            <th>Prix</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
-        </tr>
+            <tr>
+                <th>id</th>
+                <th>Boisson</th>
+                <th>Prix</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
         </thead>
         <tbody>
-        <?php
-        foreach ($drinks as $drink) {
-            echo '<tr>';
-            echo '<td>' . $drink['id'] . '</td>';
-            echo '<td>' . $drink['name'] . '</td>';
-            echo '<td>' . $drink['price'] . '</td>';
-            echo '<td><a href="update.php?update=' . $drink['id'] . '"><i class="edit-btn fas fa-pencil-alt"></i></a></td>';
-            echo '<td><a href="delete.php?delete=' . $drink['id'] . '"><i class="delete-btn far fa-times-circle"></i></a></td>';
-            echo '</tr>';
-        }
-        ?>
+            <?php foreach ($drinks as $drink) :?>
+                <tr>
+                    <td><?= $drink['id']?></td>
+                    <td><?= $drink['name']?></td>
+                    <td><?= $drink['price']?></td>
+                    <td><a href="create_and_update.php?update=<?= $drink['id']?>"><i class="edit-btn fas fa-pencil-alt"></i></a></td>
+                    <td><a href="delete.php?delete=<?= $drink['id']?>"><i class="delete-btn far fa-times-circle"></i></a></td>
+                </tr>
+            <?php endforeach;?>
         </tbody>
     </table>
 
-    <a id="add_drink" href="create_drink.php">Ajouter une boisson</a>
+    <a id="add_drink" href="create_and_update.php">Ajouter une boisson</a>
 </section>
 

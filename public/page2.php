@@ -1,5 +1,6 @@
 <?php include_once('header.php'); ?>
-
+<body>
+<?php include_once('nav.php'); ?>
 <section class="section-p2">
     <form method="post" action="index.php" class="p2">
         <div class="adress-page2">

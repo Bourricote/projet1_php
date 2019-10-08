@@ -1,10 +1,6 @@
 <?php
-include_once('../public/header.php');
-
-// Connexion BDD
-
-require_once('../src/connec.php');
-$pdo = new \PDO (DSN, USER, PASS);
+require_once('../src/parameters.php');
+include_once('../src/connection.php');
 
 // Vérification du formulaire et ajout d'une ligne dans la table avec les inputs de l'utilisateur
 
@@ -32,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors += 1;
     }
 
-    if ($errors === 0) {
+    if ($errors === 0 && !isset($_POST['id'])) {
         // ajout ligne BDD
         $newDrinkName = trim($_POST['new_drink_name']);
         $newDrinkPrice = trim($_POST['new_drink_price']);
@@ -46,30 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $statement->execute();
 
         // redirection
-        if ($errors === 0){
-            header("Location: drinks_list.php?message=La boisson a bien été ajoutée");
-            exit();
-        }
+        header("Location: ../admin/drinks_list.php?message=La boisson a bien été ajoutée");
+        exit();
+
     }
 }
-
-?>
-
-<section class="action_drink">
-    <h2>Ajouter une boisson</h2>
-    <form id="new_drink_form" action="create_drink.php" method="post">
-        <div>
-            <label for="new_drink_name">Nom :</label>
-            <input type="text" id="new_drink_name" name="new_drink_name" required>
-            <span><?= $newDrinkNameError ?></span>
-        </div>
-        <div>
-            <label for="new_drink_price">Prix :</label>
-            <input type="text" id="new_drink_price" name="new_drink_price" required>
-            <span><?= $newDrinkPriceError ?></span>
-        </div>
-        <div>
-            <button class="action_button" type="submit">Enregistrer la nouvelle boisson</button>
-        </div>
-    </form>
-</section>

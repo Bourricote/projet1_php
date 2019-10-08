@@ -2,9 +2,14 @@
 $nameErr = $first_nameErr = $emailErr = $phoneErr = "";
 $name = $first_name = $email = $phone = "";
 include_once('../src/functions.php');
+include_once('../src/connection.php');
 ?>
 
 <?php include_once('header.php'); ?>
+
+<body>
+
+<?php include_once('nav.php'); ?>
 
 <div class="banniere"></div>
 <div class="container-logo"></div>

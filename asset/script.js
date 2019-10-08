@@ -24,8 +24,11 @@ window.addEventListener('DOMMouseScroll', () => {
 });
 
 /*Message confirmation = page2.php*/
+
 const confirmButton = document.getElementById('confirmButton');
 
-confirmButton.addEventListener('click', () => {
-    alert('Commande validée, vous allez être redirigé vers l\'accueil');
-});
+if (confirmButton !== undefined) {
+    confirmButton.addEventListener('click', () => {
+        alert('Commande validée, vous allez être redirigé vers l\'accueil');
+    });
+}

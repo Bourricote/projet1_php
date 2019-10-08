@@ -763,7 +763,7 @@ footer {
     color: black;
 }
 
-/* ADMIN new_drink.php */
+/* ADMIN create_and_update.php */
 .action_drink {
     width: 40%;
     margin: 100px auto;
@@ -790,8 +790,17 @@ footer {
     color: #3850ff;
 }
 
+.fa-pencil-alt:hover {
+    color: #53d3ff;
+}
+
+
 .fa-times-circle {
     color: #ff2b3c;
+}
+
+.fa-times-circle:hover {
+    color: #ff8e42;
 }
 
 /* ADMIN delete.php */

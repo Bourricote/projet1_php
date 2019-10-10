@@ -1,4 +1,5 @@
 /*Menu burger = header.php*/
+
 const navBar = document.getElementById("myTopnav");
 const burgerIcon = document.getElementById("burger_icon");
 burgerIcon.addEventListener('click', () => {

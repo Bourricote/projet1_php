@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors += 1;
     }
 
-    if ($errors === 0 && !isset($_POST['id'])) {
+    if ($errors === 0 && !isset($_GET['update'])) {
         // ajout ligne BDD
         $newDrinkName = trim($_POST['new_drink_name']);
         $newDrinkPrice = trim($_POST['new_drink_price']);
